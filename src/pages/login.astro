@@ -1,6 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 ---
 <Layout tittle='Inicia Sesion'>
-    Ho
+    <main class="flex justify-center items-center p-32 ">
+        <div class="flex justify-center bg-white h-[575px] w-[800px] rounded-xl shadow-2xl">
+            <div class="w-1/2 bg-[#1D7373] rounded-lg">
+                <img src="../../public/profesora.jpg" alt="" class="rounded-l-xl h-full w-full brightness-75">
+            </div>
+            <div class="h-full w-1/2 flex flex-col gap-4 justify-start items-center">
+                <form action="" class="flex flex-col w-2/3 gap-8 mt-24">
+                    <input id="GET-email" type="text" placeholder="Correo Electronico" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                    <input type="password" id="GET-password" placeholder="Contraseña" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">    
+                </form>
+                <button class="bg-[#1D7373] text-white pl-3 pr-3 p-1 rounded-lg mt-5">Iniciar</button>
+                <p class="text-[#1D7373]">________________________________________</p>
+                <p class="text-sm">No tienes Cuenta? <a href="" class="text-[#1D7373] font-semibold">Crea Una</a></p>
+            </div>
+        </div>
+    </main>
 </Layout>
