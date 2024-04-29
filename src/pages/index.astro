@@ -6,11 +6,12 @@ import Cards from '../components/Cards.astro';
 
 <Layout tittle="Proyecta Tu Vida">
 	<Header></Header>
+	<!-- Imagen principal -->
 	<main class="bg-white">
-		<div class="min-h-[575px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('../../public/School.png')] brightness-[.85]">
+		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('../../public/School.png')] brightness-[.85]">
 			<div class="flex flex-col justify-center items-center drop-shadow-xl">
-				<h2 class="julius-sans-one-regular text-8xl text-white font-extrabold drop-shadow-[0_45px_45px_rgba(0,0,0,4)]">PROYECTA TU VIDA</h2>
-				<p class="mt-14 archivo-narrow text-white text-2xl font-light ">Todas tus metas están al alcance de tu determinacion</p>
+				<h2 class="julius-sans-one-regular text-8xl text-white  font-extrabold drop-shadow-[0_45px_45px_rgba(0,0,0,4)] ">PROYECTA TU VIDA</h2>
+				<p class="mt-14 archivo-narrow text-white text-2xl font-light bg-opacity-10 bg-black rounded-2xl p-1 px-2">Todas tus metas están al alcance de tu determinacion</p>
 				<!-- <button class="p-4 bg-white border-2 border-solid border-[#107361] mt-14 rounded-2xl hover:bg-[#107361] hover:border-white hover:text-white">
 					<span class="font-semibold ">REGISTER</span>
 				</button> -->
@@ -18,7 +19,7 @@ import Cards from '../components/Cards.astro';
 		</div>
 		<div></div>
 	</main>
-	
+	<!-- 1ra Seccion -->
 	<section class="mt-56 flex justify-center items-center gap-20">
 		<Cards>
 			<img src="../../public/earth.svg" alt="" slot="svg" class="size-52">
@@ -33,13 +34,23 @@ import Cards from '../components/Cards.astro';
 			<img src="../../public/smile.svg" alt="" slot="svg" class="size-52">
 		</Cards>
 	</section>
-
-	<section class="bg-white mt-56">
+	<!-- 2da Seccion -->
+	<section class="bg-white mt-56 border border-black">
 		<div class="">
-			<div class="h-[180px]"></div>
-			<img src="../../public/encues.svg" alt="" class="ml-16">
+			<div class="h-[180px] "></div>
+			<div class="flex justify-between mx-52">
+				<img src="../../public/encues.svg" alt="" class="">
+				<div class="flex flex-col justify-center gap-[15px]">
+					<h6 class="julius-sans-one-regular text-4xl	">Conoce tu condicion actual</h6>
+					<p class="archivo-narrow text-xl">Realiza un pequeño cuestionario que nos permita evaluar tu condicion academica.</p>
+					<div class="h-[25px]"></div>
+					<div class="inline-block">
+						<button class="bg-[#107361] text-white py-2 px-3 rounded-3xl text-xl archivo-narrow" onclick="window.location.href = 'quest'">Realizar cuestionario</button>
+					</div>
+				</div>
+			</div>
+			<div class="h-[180px] "></div>
 		</div>
-		
 	</section>
 </Layout>
 <style is:global>
