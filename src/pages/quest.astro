@@ -1,21 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Header from '../components/Header.astro';
+// import Script_Quest from '../components/Script_Quest.astro';
 ---
-
-<Layout tittle="Cuestionario">
-    <main class="flex justify-center items-center pt-40 ">
-        <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl">
-            <div class="flex flex-col gap-24  items-center justify-center h-full">
-                <div class="w-2/5" id="questionid">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime cumque eius odio velit dolore inventore.</div>
-                <div class="flex justify-around w-3/4 ">
-                    <div class="border border-blue-700 rounded-full py-3 px-5 answer hover:cursor-pointer" id="ans1" onclick="ans1quest1()">1</div>
-                    <div class="border border-blue-700" id="ans2" onclick="ans2quest1()">2</div>
-                    <div class="border border-blue-700" id="ans3" onclick="ans3quest1()">3</div>
-                    <div class="border border-blue-700" id="ans4" onclick="ans4quest1()">4</div>
-                    <div class="border border-blue-700" id="ans5" onclick="ans5quest1()">5</div>
+<style>
+    .answer-div{
+        border: 2px solid blue;
+        padding: 5px;
+        border-radius: 100%;
+        padding: 12px 20px;
+    }
+    .answer-div:hover{
+        cursor: pointer;
+    }
+</style>
+    <Layout tittle="Cuestionario">
+        <main class="flex justify-center items-center pt-40 ">
+            <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
+                <div class="flex flex-col gap-24  items-center justify-center h-full">
+                    <div class="w-2/5" id="questionid"></div>
+                    <div class="flex justify-around w-3/4 ">
+                        <div class="answer-div select-none" id="ans1">1</div>
+                        <div class="answer-div select-none" id="ans2">2</div>
+                        <div class="answer-div select-none" id="ans3">3</div>
+                        <div class="answer-div select-none" id="ans4">4</div>
+                        <div class="answer-div select-none" id="ans5">5</div>
+                    </div>
+                    <div id="sendQuest" class="absolute hidden flex-col items-center">
+                        <div class="text-3xl flex flex-col items-center">
+                            <h3>Nos alegra que hayas respondido todas las preguntas</h3>
+                            <div class="h-[10px]"></div>
+                            <h3>Es hora de enviar las respuestas</h3>
+                        </div>
+                        <div class="h-[60px]"></div>
+                        <div class="inline-block">
+                            <button class="bg-[#107361] text-white py-2 px-3 rounded-3xl text-xl">Enviar respuestas</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-</Layout>
+        </main>
+    </Layout>
+    <script src="../js/quest.js"></script>
+<!-- <Script_Quest></Script_Quest> -->
