@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+<script  src="../js/validation.js"></script>
+<Layout tittle='Crea una cuenta!'>
+    <main class="flex justify-center items-center p-32 ">
+        <div id="center" class=" bg-white text-center  h-[575px] w-[800px] rounded-xl shadow-2xl p-14">
+            <h1 class="text-[#1D7373] text-4xl font-semibold mb-2 julius-sans-one-regular">Regístrate</h1>
+            <div class="flex  justify-center ">
+                <div class="w-1/2 flex flex-col gap-8 p-4">
+                    <input type="text" id="name" placeholder="Nombre:" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                <input type="text" id="last_name" placeholder="Segundo Nombre:" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                <input type="email" id="email" placeholder="example@gmail.com" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                </div>
+                <div class="w-1/2 flex flex-col gap-8 p-4">
+                    <input type="password" id="password" placeholder="Contraseña" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                    <input type="password" id="confirmpass" placeholder="Confirmar  Contraseña" class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                    <select name="role" id="role"  class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="admin">Administrativo</option>
+                    </select>
+                </div>
+            </div>
+            <p class="text-[#1D7373]">_______________________________________________________________________________________________</p>
+            <button  id="register" class="mb-4 bg-[#1D7373] text-white pl-3 pr-3 p-1 rounded-lg mt-5">Registrarse</button>
+            <p class="text-sm">Ya tienes Cuenta? <a href="login" class="text-[#1D7373] font-semibold">Inicia Sesión</a></p>
+        </div>
+    </main>
+</Layout>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kanit:wght@900&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+	
+	.julius-sans-one-regular {
+		font-family: "Julius Sans One", sans-serif;
+		font-weight: 400;
+        font-style: normal;
+	}
+	.archivo-narrow {
+		font-family: "Archivo Narrow", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: <weight>;
+		font-style: normal;
+	}
+	
+</style>
