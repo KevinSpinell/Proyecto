@@ -89,49 +89,49 @@
     function change_question(){
         switch(numquest){
             case 1:
-                document.getElementById("questionid").innerText="Quest 2";
+            document.getElementById("questionid").innerText="¿Cuánto te gusta la escuela?";
                 break;
             case 2:
-                document.getElementById("questionid").innerText="Quest 3";
+                document.getElementById("questionid").innerText="¿Qué tan cómodo/a te sientes hablando con tus profesores sobre tus problemas?";
                 break;
             case 3:
-                document.getElementById("questionid").innerText="Quest 4";
+            document.getElementById("questionid").innerText="¿Qué tan apoyado/a te sientes por tus compañeros de clase?";
                 break;
             case 4:
-                document.getElementById("questionid").innerText="Quest 5";
+                document.getElementById("questionid").innerText="¿Qué tan motivado/a estás para aprender?";
                 break;
             case 5:
-                document.getElementById("questionid").innerText="Quest 6";
+                document.getElementById("questionid").innerText="¿Qué tan satisfecho/a estás con el ambiente escolar?";
                 break;
             case 6:
-                document.getElementById("questionid").innerText="Quest 7";
+                document.getElementById("questionid").innerText="¿Qué tan satisfecho/a estás con la comunicación entre tus padres/tutores y tus profesores?";
                 break;
             case 7:
-                document.getElementById("questionid").innerText="Quest 8";
+                document.getElementById("questionid").innerText="¿Qué tan seguido te sientes presionado/a por las expectativas académicas?";
                 break;
             case 8:
-                document.getElementById("questionid").innerText="Quest 9";
+                document.getElementById("questionid").innerText="¿Qué tan cómodo/a te sientes compartiendo tus opiniones?";
                 break;
             case 9:
-                document.getElementById("questionid").innerText="Quest 10";
+                document.getElementById("questionid").innerText="¿Qué tan preocupado/a estás por tu futuro después de la escuela?";
                 break;
             case 10:
-                document.getElementById("questionid").innerText="Quest 11";
+                document.getElementById("questionid").innerText="¿Qué tan seguido te sientes valorado/a y respetado/a por tus compañeros de clase?";
                 break;
             case 11:
-                document.getElementById("questionid").innerText="Quest 12";
+                document.getElementById("questionid").innerText="¿Qué tan bien crees que la escuela reconoce y apoya las necesidades individuales de los estudiantes?";
                 break;
             case 12:
-                document.getElementById("questionid").innerText="Quest 13";
+                document.getElementById("questionid").innerText="¿Qué tan bien crees que la escuela maneja los problemas de disciplina y comportamiento?";
                 break;
             case 13:
-                document.getElementById("questionid").innerText="Quest 14";
+                document.getElementById("questionid").innerText="¿Qué tan satisfecho/a estás con las oportunidades de desarrollo personal y académico que ofrece la escuela?";
                 break;
             case 14:
-                document.getElementById("questionid").innerText="Quest 15";
+                document.getElementById("questionid").innerText="¿Qué tan satisfactoria es tu experiencia general en la escuela?";
                 break;
             case 15:
-                document.getElementById("questionid").innerText="Quest 16";
+                document.getElementById("questionid").innerText="¿Qué tan seguro/a te sientes en tu capacidad para enfrentar los desafíos académicos?";
                 break;
             case 16:
                 showButton();
