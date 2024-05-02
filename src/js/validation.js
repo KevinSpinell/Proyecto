@@ -4,12 +4,12 @@ let valido = sessionStorage.getItem("loggedUserEmail");
 document.addEventListener("DOMContentLoaded", function() {
     let loginButton = document.querySelector("#iniciar");
     let back_button = document.getElementById("inicio");
-    if (back_button) { //
+    if (back_button) { 
         back_button.addEventListener("click", function() {
             back();
         });
     }
-    if (loginButton) { //
+    if (loginButton) { 
         loginButton.addEventListener("click", function() {
             Login();
         });
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     let registerButton = document.querySelector('[id="register"]');
     let back_button = document.getElementById("inicio");
-    if (back_button) { //
+    if (back_button) { 
         back_button.addEventListener("click", function() {
             back();
         });
