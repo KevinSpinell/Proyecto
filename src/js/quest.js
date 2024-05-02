@@ -51,7 +51,7 @@
         setTimeout(function() {
             ans.style.border = "";
             change_question();
-        }, 1000);
+        }, 500);
     }
     function lights2(){
         var ans= document.getElementById("ans2")
@@ -59,7 +59,7 @@
         setTimeout(function() {
             ans.style.border = "";
             change_question();
-        }, 1000);
+        }, 500);
     }
     function lights3(){
         var ans= document.getElementById("ans3")
@@ -67,7 +67,7 @@
         setTimeout(function() {
             ans.style.border = "";
             change_question();
-        }, 1000);
+        }, 500);
     }
     function lights4(){
         var ans= document.getElementById("ans4")
@@ -75,7 +75,7 @@
         setTimeout(function() {
             ans.style.border = "";
             change_question();
-        }, 1000);
+        }, 500);
     }
     function lights5(){
         var ans= document.getElementById("ans5")
@@ -83,7 +83,7 @@
         setTimeout(function() {
             ans.style.border = "";
             change_question();
-        }, 1000);
+        }, 500);
     }
 
     function change_question(){

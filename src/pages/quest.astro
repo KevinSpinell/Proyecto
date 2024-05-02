@@ -17,8 +17,14 @@ import Header from '../components/Header.astro';
     <Layout tittle="Cuestionario">
         <main class="flex justify-center items-center pt-40 ">
             <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
-                <div class="flex flex-col gap-24  items-center justify-center h-full">
+                <div class="flex flex-col items-center justify-center h-full">
+                    <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-green-700 rounded-2xl text-white hover:cursor-pointer" onclick="window.location.href = 'index.html'">
+                        <p>
+                            Regresar
+                        </p>
+                    </div>
                     <div class="w-2/5" id="questionid"></div>
+                    <div class="h-24"></div>
                     <div class="flex justify-around w-3/4 ">
                         <div class="answer-div select-none" id="ans1">1</div>
                         <div class="answer-div select-none" id="ans2">2</div>
