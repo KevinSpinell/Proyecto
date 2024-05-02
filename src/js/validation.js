@@ -1,6 +1,6 @@
-import { componentIsHTMLElement } from "astro/runtime/server/render/dom.js";
 
-let valido = true
+let valido = sessionStorage.getItem("loggedUserEmail");
+
 document.addEventListener("DOMContentLoaded", function() {
     let loginButton = document.querySelector("#iniciar");
     let back_button = document.getElementById("inicio");
