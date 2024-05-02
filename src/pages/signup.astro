@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 <script  src="../js/validation.js"></script>
 <Layout tittle='Crea una cuenta!'>
-    <main class="flex justify-center items-center p-32 ">
+    <main class="flex justify-center items-center p-32 bg-[url('/public/fondo_login.jpg')] bg-cover  ">
         <div id="center" class=" bg-white text-center  h-[575px] w-[800px] rounded-xl shadow-2xl p-14">
             <h1 class="text-[#1D7373] text-4xl font-semibold mb-2 julius-sans-one-regular">Regístrate</h1>
             <div class="flex  justify-center ">
@@ -19,11 +19,15 @@ import Layout from '../layouts/Layout.astro';
                     <select name="role" id="role"  class="border-2 rounded-lg p-2 border-[#1D7373] outline-none">
                         <option value="estudiante">Estudiante</option>
                         <option value="admin">Administrativo</option>
+                        <option value="estudiante">Otro</option>
                     </select>
                 </div>
             </div>
             <p class="text-[#1D7373]">_______________________________________________________________________________________________</p>
-            <button  id="register" class="mb-4 bg-[#1D7373] text-white pl-3 pr-3 p-1 rounded-lg mt-5">Registrarse</button>
+            <div class="flex gap-4 justify-center mb-2">
+                <button id="inicio" class="bg-white text-[#1D7373] border-2 border-[#1D7373] pl-3 pr-3 pt-0 rounded-lg mt-5 mb-4 hover:text-white hover:bg-[#1D7373]">Inicio</button>
+                <button  id="register" class="mb-4 bg-[#1D7373] text-white pl-3 pr-3 p-1 rounded-lg mt-5">Registrarse</button>
+            </div>
             <p class="text-sm">Ya tienes Cuenta? <a href="login" class="text-[#1D7373] font-semibold">Inicia Sesión</a></p>
         </div>
     </main>
