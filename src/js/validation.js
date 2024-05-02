@@ -1,5 +1,14 @@
+import { componentIsHTMLElement } from "astro/runtime/server/render/dom.js";
+
+let valido = true
 document.addEventListener("DOMContentLoaded", function() {
     let loginButton = document.querySelector("#iniciar");
+    let back_button = document.getElementById("inicio");
+    if (back_button) { //
+        back_button.addEventListener("click", function() {
+            back();
+        });
+    }
     if (loginButton) { //
         loginButton.addEventListener("click", function() {
             Login();
@@ -8,15 +17,31 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.addEventListener("DOMContentLoaded", function() {
     let registerButton = document.querySelector('[id="register"]');
+    let back_button = document.getElementById("inicio");
+    if (back_button) { //
+        back_button.addEventListener("click", function() {
+            back();
+        });
+    }
     if (registerButton) {
         registerButton.addEventListener("click", function() {
             Register();
         });   
     }  
 });
+document.addEventListener("DOMContentLoaded", function() {
+    if(valido){
+        document.getElementById("button_login").innerText = "Cerrar Sesión"
+        let button_login = document.getElementById("button_login")
+        if(button_login){
+            button_login.addEventListener( 'click', function(){
+                cerrarSesion()
+            });
+        }
+    }
+});
 
 // JS DEL REGISTER
-let users  = []
 class User{
     name;last_name;email;password;role
     constructor(name, last_name, email, password,  role){
@@ -37,6 +62,13 @@ class User{
     }
 }
 
+
+
+
+//JS DEL LOGIN 
+function back(){
+    window.location="index.html";
+}
 function validateEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
@@ -55,7 +87,6 @@ function Register() {
                 let user = new User(name.value, last_name.value, email.value, password.value, "user")
                 let userKey = "user_" + email.value
                 localStorage.setItem(userKey, JSON.stringify(user))
-
                 alert(`Usuario ${user.name} ${user.last_name}, ha sido registrado exitosamente`)
                 window.location = "login"
             } else {
@@ -67,8 +98,6 @@ function Register() {
     }
 }
 
-
-//JS DEL LOGIN 
 function Login() {
     let email = document.getElementById("GET-email")
     let password = document.getElementById("GET-password")
@@ -85,7 +114,6 @@ function Login() {
             }
         }
     }
-
     if (valido) {
         window.location = "index.html"
     } else {
@@ -93,4 +121,9 @@ function Login() {
     }
 }
 
+function cerrarSesion(){
+    sessionStorage.clear();
+    document.getElementById("button_login").innerText = "Iniciar Sesión"
+    window.location="login";
+}
 // JS DEL INDEX
