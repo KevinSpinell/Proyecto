@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout tittle="Caja de texto">
+    <div class="flex justify-center items-center pt-40">
+        <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl shadow-emerald-500">
+            <div class="p-8 grid grid-cols-2">
+
+                <div class="h-[525px]">
+                    <textarea name="" id="text1" rows="5" cols="33" class="w-full h-full bg-slate-100 rounded-2xl resize-none p-4" placeholder="Escribe aqui!"></textarea>
+                </div>
+                
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="text-center p-4 mb-4">
+                        <p>Escribe un texto de como te sientes cuando vas al colegio, <b>se sincero contigo mismo</b>, no pasara nada con lo que digas.Te vamos a leer 😃</p>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" id="submitButton" class="bg-[#001C13] text-white py-2 px-3 rounded-3xl text-xl archivo-narrow hover:bg-[#2c4c42] ">Enviar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/box.js"></script>
+</Layout>
