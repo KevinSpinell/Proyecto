@@ -8,10 +8,10 @@ import Cards from '../components/Cards.astro';
 	<Header></Header>
 	<!-- Imagen principal -->
 	<main class="bg-white">
-		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center">
-			<div class="flex flex-col justify-center items-center drop-shadow-xl">
-				<h2 class="julius-sans-one-regular text-8xl text-black  font-extrabold drop-shadow-[0_45px_45px_rgba(0,0,0,4)] ">PROYECTA TU VIDA</h2>
-				<p class="mt-14 archivo-narrow text-black text-2xl font-light p-1 px-2">Todas tus metas están al alcance de tu determinacion</p>
+		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/prueb.png')] brightness-90">
+			<div class="flex flex-col justify-center items-center drop-shadow-xl mb-16">
+				<h2 class="julius-sans-one-regular text-8xl text-black  font-black drop-shadow-[0_45px_45px_rgba(0,0,0,4)] font">PROYECTA TU VIDA</h2>
+				<p class="mt-14 archivo-narrow text-black text-2xl font-medium p-1 px-2">Todas tus metas están al alcance de tu determinacion</p>
 			</div>
 		</div>
 		<div></div>
@@ -19,19 +19,19 @@ import Cards from '../components/Cards.astro';
 	<!-- 1ra Seccion -->
 	<section class="mt-56 flex justify-center items-center gap-20">
 		<Cards>
-			<img src="../../public/earth.svg" alt="" slot="svg" class="size-44">
-			<h1 slot="title">Lorem</h1>
-			<p slot="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos optio commodi eius molestias, consectetur, recusandae aperiam doloremque natus, mollitia nihil amet. Magni inventore nostrum veritatis quos nisi ducimus nam facere.</p>
+			<img src="../../public/motivacion.avif" alt="" slot="svg" class="size-44">
+			<h1 slot="title" class="font-semibold">Motivación </h1>
+			<p slot="content">Estudiar puede ser desafiante, pero cada paso te acerca a tus sueños. Cada libro que lees y tarea que completas te acerca al éxito. Mantén la determinación y recuerda por qué comenzaste. Tu esfuerzo de hoy es una inversión en tu futuro. ¡Tú puedes lograrlo!</p>
 		</Cards>
 		<Cards>
-			<img src="../../public/book.svg" alt="" slot="svg" class="size-44">
-			<h1 slot="title">Lorem</h1>
-			<p slot="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos optio commodi eius molestias, consectetur, recusandae aperiam doloremque natus, mollitia nihil amet. Magni inventore nostrum veritatis quos nisi ducimus nam facere.</p>
+			<img src="../../public/perseverancia.jpg" alt="" slot="svg" class="size-44">
+			<h1 slot="title" class="font-semibold">Perseverancia</h1>
+			<p slot="content">La perseverancia en los estudios nos lleva al éxito. A pesar de los desafíos, sigamos adelante. Cada paso nos acerca a nuestros sueños. Aprendamos de los errores y sigamos avanzando con determinación. Con esfuerzo, alcanzaremos nuestras metas académicas. ¡Juntos hacia un futuro brillante!</p>
 		</Cards>
 		<Cards>
-			<img src="../../public/smile.svg" alt="" slot="svg" class="size-44">
-			<h1 slot="title">Lorem</h1>
-			<p slot="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos optio commodi eius molestias, consectetur, recusandae aperiam doloremque natus, mollitia nihil amet. Magni inventore nostrum veritatis quos nisi ducimus nam facere.</p>
+			<img src="../../public/apoyo.avif" alt="" slot="svg" class="size-44">
+			<h1 slot="title" class="font-semibold">Apoyo emocional</h1>
+			<p slot="content">El apoyo emocional es fundamental. Nos fortalece en momentos difíciles, nos motiva a seguir adelante y nos brinda consuelo en tiempos de necesidad. Con el apoyo de quienes nos rodean, podemos superar desafíos y alcanzar nuestras metas con mayor confianza y determinación.</p>
 		</Cards>
 	</section>
 	<!-- 2da Seccion -->
@@ -45,9 +45,9 @@ import Cards from '../components/Cards.astro';
 					<p class="archivo-narrow text-xl">Realiza un pequeño cuestionario que nos permita evaluar tu condicion academica.</p>
 					<div class="h-[25px]"></div>
 					<div class="inline-block gap-24">
-						<button class="bg-[#00c3eb] text-white py-2 px-3 rounded-3xl text-xl archivo-narrow" onclick="window.location.href = 'quest'">Realizar cuestionario</button>
+						<button class="bg-[#00c3eb] text-white py-2 px-3 rounded-3xl text-xl archivo-narrow ease-in duration-300 hover:scale-110 mr-8 hover:bg-white hover:text-[#00c3eb] border hover:border-[#00c3eb]" onclick="window.location.href = 'quest'">Realizar cuestionario</button>
 						
-						<button class="bg-[#00c3eb] text-white py-2 px-3 rounded-3xl text-xl archivo-narrow" onclick="window.location.href = 'text'">Preview caja de texto</button>
+						<button class="bg-[#00c3eb] text-white py-2 px-3 rounded-3xl text-xl archivo-narrow ease-in duration-300 hover:scale-110 hover:bg-white hover:text-[#00c3eb] border hover:border-[#00c3eb]" onclick="window.location.href = 'text'">Preview caja de texto</button>
 					</div>
 				</div>
 			</div>
