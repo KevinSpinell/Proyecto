@@ -80,11 +80,12 @@ function Register() {
     let email = document.getElementById("email")
     let password = document.getElementById("password")
     let confirmpass = document.getElementById("confirmpass")
+    let role = document.getElementById("role")
 
     if (name && last_name && email && password && confirmpass) {
         if (name.value.length > 3 && last_name.value.length > 4) {
             if (validateEmail(email.value) && password.value == confirmpass.value && password.value.length >= 8) {
-                let user = new User(name.value, last_name.value, email.value, password.value, "user")
+                let user = new User(name.value, last_name.value, email.value, password.value, role.value)
                 let userKey = "user_" + email.value
                 localStorage.setItem(userKey, JSON.stringify(user))
                 alert(`Usuario ${user.name} ${user.last_name}, ha sido registrado exitosamente`)
@@ -109,7 +110,7 @@ function Login() {
             let user = JSON.parse(localStorage.getItem(key))
             if (user.email == email.value && user.password == password.value) {
                 valido = true
-                sessionStorage.setItem("loggedUserEmail", email.value)
+                sessionStorage.setItem("loggedUserEmail", JSON.stringify(user))
                 break;
             }
         }
@@ -127,3 +128,22 @@ function cerrarSesion(){
     window.location="login";
 }
 // JS DEL INDEX
+
+function MostrarSeccionAdmin() {
+    let adminSection = document.getElementById("admin");
+    adminSection.style.display = "block";
+}
+
+function OcultarSeccionAdmin() {
+    let adminSection = document.getElementById("admin");
+    adminSection.style.display = "none";
+}
+
+function VerificarRolUsuario() {
+    let user = JSON.parse(sessionStorage.getItem("loggedUserEmail"));
+    if (user.rol === "admin") {
+        MostrarSeccionAdmin();
+    } else {
+        OcultarSeccionAdmin();
+    }
+}
