@@ -1,8 +1,7 @@
-    
-    var gone=0;
     var good=0;
-    var near=0;
     var far=0;
+    var near=0;
+    var gone=0;
     var numquest=0;
     function charge(){
         document.getElementById("questionid").innerText="¿Qué tan comodo es el ambiente de tu colegio para ti?";
@@ -22,6 +21,7 @@
     function ans2quest1(){
         near++;
         numquest++;
+        console.log(gone, good, far, numquest)
         lights2()
     }
     document.getElementById("ans2").addEventListener("click",ans2quest1)
@@ -107,13 +107,13 @@
                 document.getElementById("questionid").innerText="¿Qué tan satisfecho/a estás con la comunicación entre tus padres/tutores y tus profesores?";
                 break;
             case 7:
-                document.getElementById("questionid").innerText="¿Qué tan seguido te sientes presionado/a por las expectativas académicas?";
+                document.getElementById("questionid").innerText="¿Qué tan conforme te sientes con tus resultados académicos?";
                 break;
             case 8:
                 document.getElementById("questionid").innerText="¿Qué tan cómodo/a te sientes compartiendo tus opiniones?";
                 break;
             case 9:
-                document.getElementById("questionid").innerText="¿Qué tan preocupado/a estás por tu futuro después de la escuela?";
+                document.getElementById("questionid").innerText="¿Qué tan seguro estás de tu futuro después de la escuela?";
                 break;
             case 10:
                 document.getElementById("questionid").innerText="¿Qué tan seguido te sientes valorado/a y respetado/a por tus compañeros de clase?";
@@ -144,5 +144,35 @@
         document.getElementById("ans3").style.display = "none";
         document.getElementById("ans4").style.display = "none";
         document.getElementById("ans5").style.display = "none";
+        document.getElementById("help").style.display = "none";
         document.getElementById("sendQuest").style.display = "flex";
     }
+    var good=0;
+    var far=0;
+    var near=0;
+    var gone=0;
+    function showMessage(){
+        document.getElementById("sendQuest").style.display = "none";
+        if(good>far && good>near && good>gone){
+            document.getElementById("titleMessage").innerText = "Tus esfuerzos dan frutos"
+            document.getElementById("message").innerText = "Felicidades por tu excelente desempeño académico. Tu dedicación y esfuerzo están dando frutos, y eso es algo para estar realmente orgulloso. Sigue aprovechando tu impulso y mantén el enfoque en tus metas. Recuerda que el éxito no es solo un destino, sino un viaje continuo de crecimiento y aprendizaje. Mantén tu curiosidad y tu pasión por el conocimiento, y sigue buscando nuevas formas de desafiarte a ti mismo. Tu determinación y compromiso te llevarán aún más lejos en tu camino hacia el éxito. ¡Sigue brillando y alcanzando nuevas alturas!"
+        }
+        else if(far>good && far>near && far>gone || good==far){
+            document.getElementById("titleMessage").innerText = "Vas por un muy buen camino"
+            document.getElementById("message").innerText ="Eres un estudiante con un desempeño sólido y constante. Continúa trabajando con determinación y mantén tus objetivos en mente. Reconoce tus logros hasta ahora y sigue esforzándote para alcanzar tus metas. Confía en tus habilidades y en el progreso que has logrado hasta ahora, y sigue adelante con paso firme hacia tus aspiraciones."
+        }
+        else if(near>far && near>good && near>gone || near==gone){
+            document.getElementById("titleMessage").innerText = "Nada debe ser un impedimento para que te superes a ti mismo"
+            document.getElementById("message").innerText ="Estás enfrentando algunos desafíos en tu desempeño académico en este momento, pero eso no define tu capacidad ni tu valía como estudiante. Reconoce las áreas en las que puedes mejorar y busca recursos y apoyo para superar estos obstáculos. Recuerda que los momentos difíciles también ofrecen oportunidades de crecimiento y aprendizaje. Mantén una actitud positiva y perseverante, y confía en tu capacidad para superar esta situación. Con esfuerzo y dedicación, puedes mejorar y alcanzar tus metas académicas."
+        }
+        else if(gone>far && gone>near && gone>good){
+            document.getElementById("titleMessage").innerText = "Caer y levantarse es parte del proceso del éxito"
+            document.getElementById("message").innerText ="Entiendo que estás pasando por un momento difícil en tu desempeño académico. Es importante recordar que los contratiempos son parte de la experiencia de aprendizaje y no definen tu valía como persona. En lugar de centrarte en los errores del pasado, concéntrate en el camino hacia la mejora. Identifica las áreas en las que necesitas ayuda y busca el apoyo adecuado, ya sea de tus profesores, tutores o compañeros de clase. Recuerda que cada desafío superado te acerca un paso más a tus objetivos. Mantén la cabeza en alto, mantén una actitud positiva y sigue adelante con determinación. Con esfuerzo y perseverancia, puedes superar estos desafíos y alcanzar el éxito académico."
+        }
+        else if(far==near || gone==good || near==good || far==gone ){
+            document.getElementById("titleMessage").innerText = "Tu puedes, nunca dudes de ello"
+            document.getElementById("message").innerText = "Es natural tener altibajos en el desempeño académico, y es importante reconocer que estar en una etapa 'regular' es solo una parte del proceso de aprendizaje. Utiliza este momento como una oportunidad para reflexionar sobre tus fortalezas y áreas de mejora. Identifica qué aspectos de tu enfoque de estudio podrían ajustarse para mejorar tu rendimiento. Recuerda que cada obstáculo es una oportunidad para crecer y aprender. Mantén una actitud positiva y persevera en tus esfuerzos. Con paciencia y determinación, puedes superar los desafíos y alcanzar tus metas académicas."
+        }
+        document.getElementById("mesDiv").style.display = "flex";
+    }
+    document.getElementById("send").addEventListener("click",showMessage)
