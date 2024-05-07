@@ -35,7 +35,7 @@ import Cards from '../components/Cards.astro';
 		</Cards>
 	</section>
 	<!-- 2da Seccion -->
-	<section class="bg-white mt-56 border border-black">
+	<section class="bg-white mt-56 border border-black" id="user">
 		<div class="">
 			<div class="h-[180px] "></div>
 			<div class="flex justify-between mx-52">
@@ -53,6 +53,10 @@ import Cards from '../components/Cards.astro';
 			</div>
 			<div class="h-[180px] "></div>
 		</div>
+	</section>
+	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
+	<section id="admin" class="text-black bg-slate-300 hidden">
+		Hola
 	</section>
 	<footer class="text-white p-16 flex flex-col items-center bg-[#005994]">
 		<div class="flex  justify-center gap-3">
@@ -87,3 +91,24 @@ import Cards from '../components/Cards.astro';
 	}
 	
 </style>
+<script>
+	function VerificarRol(){
+		let key = sessionStorage.key(0);
+    	let user = sessionStorage.getItem(key);
+		let users = JSON.parse(user)
+        if (users.role === "admin") {
+			console.log(users.role)
+            let adminSection = document.getElementById("admin");
+            adminSection.style.display = "block";
+        } else {
+			let adminSection = document.getElementById("admin");
+            adminSection.style.display = "none";
+			console.log(users.role)
+        }
+		console.log(users)
+	}
+	
+	document.addEventListener('DOMContentLoaded', function() {
+            VerificarRol();
+    });
+</script>
