@@ -1,3 +1,4 @@
+import { saveAs } from 'file-saver';
 import Swal from 'sweetalert2';
     export { Swal };
 import 'sweetalert2/src/sweetalert2.scss'
@@ -35,6 +36,17 @@ function evaluartext() {
         }
     });
     console.log(c);
-    let termino = document.getElementById("text1").value="";
     
+    // let textoUsuario = document.getElementById("text1").value.trim();
+
+    // const blob = new Blob([textoUsuario], { type: 'text/plain;charset=utf-8' });
+
+    
+    // saveAs(blob, 'datos/archivo.txt');
+
+    // localStorage.setItem("Texto",a)
+
+    console.log(localStorage.getItem("Texto"));
+    a = document.getElementById("text1").value=" "
 }
+
