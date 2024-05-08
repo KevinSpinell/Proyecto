@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Cards from '../components/Cards.astro';
----
+import Chart from 'chart.js/auto';
 
-<Layout tittle="Proyecta Tu Vida">
+---
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><Layout tittle="Proyecta Tu Vida">
 	<Header></Header>
 	<!-- Imagen principal -->
 	<main class="bg-white">
@@ -55,8 +56,9 @@ import Cards from '../components/Cards.astro';
 		</div>
 	</section>
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
-	<section id="admin" class="text-black bg-slate-300 hidden">
-		Hola
+	<section id="admin" class="text-black bg-slate-300 hidden max-h-[800px]">
+		<h2>Gráfico de ejemplo</h2>
+      <canvas id="myChart" class="scale-50"></canvas>
 	</section>
 	<footer class="text-white p-16 flex flex-col items-center bg-[#005994]">
 		<div class="flex  justify-center gap-3">
@@ -92,6 +94,40 @@ import Cards from '../components/Cards.astro';
 	
 </style>
 <script>
+	// Esperar a que el DOM esté cargado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Data para el gráfico
+      var data = {
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+        datasets: [{
+          label: 'Ventas',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
+          data: [12, 19, 3, 5, 2, 3],
+        }]
+      };
+
+      // Configuración del gráfico
+      var config = {
+        type: 'doughnut',
+        data: data,
+        // options: {
+        //   scales: {
+        //     y: {
+        //       beginAtZero: true
+        //     }
+        //   }
+        // }
+      };
+
+      // Obtener el contexto 2D del elemento canvas
+      var ctx = document.getElementById('myChart').getContext('2d');
+
+      // Crear el gráfico
+      new Chart(ctx, config);
+    });
+
 	function VerificarRol(){
 		let key = sessionStorage.key(0);
     	let user = sessionStorage.getItem(key);
@@ -111,4 +147,5 @@ import Cards from '../components/Cards.astro';
 	document.addEventListener('DOMContentLoaded', function() {
             VerificarRol();
     });
+	
 </script>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.6.3",
+    "chart.js": "^4.4.2",
     "file-saver": "^2.0.5",
     "filesaver.js": "^1.3.4",
     "sweetalert2": "^11.10.8",

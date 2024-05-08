@@ -44,7 +44,7 @@ function evaluartext() {
     
     // saveAs(blob, 'datos/archivo.txt');
 
-    // localStorage.setItem("Texto",a)
+    localStorage.setItem("Texto",a)
 
     console.log(localStorage.getItem("Texto"));
     a = document.getElementById("text1").value=" "
