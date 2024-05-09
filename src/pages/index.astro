@@ -36,7 +36,7 @@ import Chart from 'chart.js/auto';
 		</Cards>
 	</section>
 	<!-- 2da Seccion -->
-	<section class="bg-white mt-56 border border-black" id="user">
+	<section class="bg-white mt-56 " id="user">
 		<div class="">
 			<div class="h-[180px] "></div>
 			<div class="flex justify-between mx-52">
@@ -56,10 +56,13 @@ import Chart from 'chart.js/auto';
 		</div>
 	</section>
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
-	<section id="admin" class="text-black bg-slate-300 hidden max-h-[800px]">
-		<h2>Gráfico de ejemplo</h2>
-      <canvas id="myChart" class="scale-50"></canvas>
+	<div id="div1gra" class=" h-[100px]"></div>
+	<section id="admin" class="text-black bg-white hidden max-h-[800px] pt-[50px] pb-[90px] text-center">
+		<h2 class="archivo-narrow select-none text-3xl mb-[100px]">En el siguiente gráfico se observan los resultados acumulados en el cuestionario</h2>
+      	<canvas id="myChart" class=""></canvas>
 	</section>
+	<div id="div2gra" class=" bg-white h-[100px]"></div>
+	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#005994]">
 		<div class="flex  justify-center gap-3">
 			<p>_______________________________________________________________</p>
@@ -94,39 +97,72 @@ import Chart from 'chart.js/auto';
 	
 </style>
 <script>
-	// Esperar a que el DOM esté cargado
-    document.addEventListener('DOMContentLoaded', function() {
-      // Data para el gráfico
-      var data = {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-        datasets: [{
-          label: 'Ventas',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1,
-          data: [12, 19, 3, 5, 2, 3],
-        }]
-      };
 
-      // Configuración del gráfico
-      var config = {
+document.addEventListener('DOMContentLoaded', function() {
+	var blue= localStorage.getItem('blue');
+    var green= localStorage.getItem('green');
+    var yellow= localStorage.getItem('yellow');
+    var orange= localStorage.getItem('orange');
+    var red= localStorage.getItem('red');
+
+    // Data para el gráfico
+    var data = {
+        labels: ['No desertará', 'Dificil que deserte', 'Dudosa situación', 'Posible deserción', 'Deserción muy posible'],
+        datasets: [{
+            label: 'Resultados',
+            backgroundColor: [
+				'#0000FF66', // Azul (66 en hexadecimal es aproximadamente 40% de opacidad)
+				'#00800066', // Verde
+				'#FFFF0066', // Amarillo
+				'#FFA50066', // Naranja
+				'#FF000066'  // Rojo
+			],
+			borderColor: [
+				'#0000FF99', // Azul (99 en hexadecimal es aproximadamente 60% de opacidad)
+				'#00800099', // Verde
+				'#FFFF0099', // Amarillo
+				'#FFA50099', // Naranja
+				'#FF000099'  // Rojo
+			],
+            borderWidth: 1,
+            data: [blue,green,yellow,orange,red],
+        }]
+    };
+
+    // Configuración del gráfico
+    var config = {
         type: 'doughnut',
         data: data,
-        // options: {
-        //   scales: {
-        //     y: {
-        //       beginAtZero: true
-        //     }
-        //   }
-        // }
-      };
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+			layout: {
+                padding: {
+                    right: 100 // Ajuste de margen derecho del gráfico
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'right', // Ubicación de la leyenda (right, left, top, bottom)
+					labels: {
+                        padding: 20, // Ajuste de margen para la leyenda
+						font: {
+                            size: 20 // Tamaño de la fuente de los labels
+                        }
+                    }
+                }
+            }
+			
+        }
+    };
 
-      // Obtener el contexto 2D del elemento canvas
-      var ctx = document.getElementById('myChart').getContext('2d');
+    // Obtener el contexto 2D del elemento canvas
+    var ctx = document.getElementById('myChart').getContext('2d');
 
-      // Crear el gráfico
-      new Chart(ctx, config);
-    });
+    // Crear el gráfico
+    new Chart(ctx, config);
+});
+
 
 	function VerificarRol(){
 		let key = sessionStorage.key(0);
