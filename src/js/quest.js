@@ -199,14 +199,14 @@
             localStorage.setItem('blue', blue);
         }
         //Mensaje cuando hay poco riesgo
-        else if(far>good && far>near && far>gone || good==far){
+        else if((far>good && far>near && far>gone) || (good==far && good!=0)){
             document.getElementById("titleMessage").innerText = "Vas por un muy buen camino"
             document.getElementById("message").innerText ="Eres un estudiante con un desempeño sólido y constante. Continúa trabajando con determinación y mantén tus objetivos en mente. Reconoce tus logros hasta ahora y sigue esforzándote para alcanzar tus metas. Confía en tus habilidades y en el progreso que has logrado hasta ahora, y sigue adelante con paso firme hacia tus aspiraciones."
             green++;
             localStorage.setItem('green', green);
         }
         //Mensaje cuando sí hay un poco de riesgo
-        else if(near>far && near>good && near>gone || near==gone){
+        else if((near>far && near>good && near>gone) || (near==gone && near!=0)){
             document.getElementById("titleMessage").innerText = "Nada debe ser un impedimento para que te superes a ti mismo"
             document.getElementById("message").innerText ="Estás enfrentando algunos desafíos en tu desempeño académico en este momento, pero eso no define tu capacidad ni tu valía como estudiante. Reconoce las áreas en las que puedes mejorar y busca recursos y apoyo para superar estos obstáculos. Recuerda que los momentos difíciles también ofrecen oportunidades de crecimiento y aprendizaje. Mantén una actitud positiva y perseverante, y confía en tu capacidad para superar esta situación. Con esfuerzo y dedicación, puedes mejorar y alcanzar tus metas académicas."
             orange++;

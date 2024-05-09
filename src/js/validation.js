@@ -128,22 +128,3 @@ function cerrarSesion(){
     window.location="login";
 }
 // JS DEL INDEX
-
-function MostrarSeccionAdmin() {
-    let adminSection = document.getElementById("admin");
-    adminSection.style.display = "block";
-}
-
-function OcultarSeccionAdmin() {
-    let adminSection = document.getElementById("admin");
-    adminSection.style.display = "none";
-}
-
-function VerificarRolUsuario() {
-    let user = JSON.parse(sessionStorage.getItem("loggedUserEmail"));
-    if (user.rol === "admin") {
-        MostrarSeccionAdmin();
-    } else {
-        OcultarSeccionAdmin();
-    }
-}
