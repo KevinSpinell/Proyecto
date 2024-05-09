@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 ---
 <style>
     .answer-div{
-        border: 2px solid blue;
+        border: 1px solid rgb(187, 186, 186);
         padding: 5px;
         border-radius: 100%;
         padding: 12px 20px;
@@ -23,7 +23,7 @@ import Header from '../components/Header.astro';
                             Regresar
                         </p>
                     </div>
-                    <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-yellow-400 select-none">
+                    <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-purple-300 select-none">
                         <p>
                             5: Mucho | 4: Un poco | 3: Más o menos | 2: Poco | 1: Muy Poco
                         </p>
@@ -31,11 +31,11 @@ import Header from '../components/Header.astro';
                     <div class="w-2/5 text-center" id="questionid"></div>
                     <div class="h-24"></div>
                     <div class="flex justify-around w-3/4 ">
-                        <div class="answer-div select-none" id="ans1">1</div>
-                        <div class="answer-div select-none" id="ans2">2</div>
-                        <div class="answer-div select-none" id="ans3">3</div>
-                        <div class="answer-div select-none" id="ans4">4</div>
-                        <div class="answer-div select-none" id="ans5">5</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans1">1</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans2">2</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans3">3</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans4">4</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans5">5</div>
                     </div>
                     <div id="sendQuest" class=" hidden flex-col items-center">
                         <div class="text-3xl flex flex-col items-center select-none">
