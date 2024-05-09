@@ -56,12 +56,15 @@ import Chart from 'chart.js/auto';
 		</div>
 	</section>
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
-	<div id="div1gra" class=" h-[100px]"></div>
-	<section id="admin" class="text-black bg-white hidden max-h-[800px] pt-[50px] pb-[90px] text-center">
-		<h2 class="archivo-narrow select-none text-3xl mb-[100px]">En el siguiente gráfico se observan los resultados acumulados en el cuestionario</h2>
-      	<canvas id="myChart" class=""></canvas>
+	<div id="div1gra" class=" h-[100px] pt-7 font-semibold ">
+		<h2 class="text-white text-center archivo-narrow select-none julius-sans-one-regular text-3xl mb-[100px]">En el siguiente gráfico se observan los resultados acumulados en el cuestionario</h2>
+	</div>
+	<section id="admin" class="text-black bg-white hidden max-h-[800px] pt-[80px] pb-[90px] text-center">
+		<div class="w-1/2">
+			<canvas id="myChart" class=""></canvas>
+		</div>
 	</section>
-	<div id="div2gra" class=" bg-white h-[100px]"></div>
+	<!-- <div id="div2gra" class=" bg-white h-[100px]"></div> -->
 	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#005994]">
 		<div class="flex  justify-center gap-3">
@@ -172,8 +175,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.log(users.role)
             let adminSection = document.getElementById("admin");
             adminSection.style.display = "block";
+			document.getElementById("div1gra").style.display = "block";
         } else {
 			let adminSection = document.getElementById("admin");
+			document.getElementById("div1gra").style.display = "none";
             adminSection.style.display = "none";
 			console.log(users.role)
         }
