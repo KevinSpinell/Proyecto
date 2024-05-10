@@ -8,7 +8,7 @@ import Chart from 'chart.js/auto';
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><Layout tittle="Proyecta Tu Vida">
 	<Header></Header>
 	<!-- Imagen principal -->
-	<main class="bg-white">
+	<main class="bg-white select-none">
 		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/salon.svg')] ">
 			<div class="flex flex-col justify-center items-center drop-shadow-2xl mb-16">
 				<h2 class="julius-sans-one-regular text-8xl text-white  font-black filter font" style="filter: drop-shadow(5px 5px 1px #000000);">PROYECTA TU VIDA</h2>
@@ -18,25 +18,25 @@ import Chart from 'chart.js/auto';
 		<div></div>
 	</main>
 	<!-- 1ra Seccion -->
-	<section class="mt-56 flex justify-center items-center gap-20">
+	<section class="mt-56 flex justify-center items-center gap-20 select-none">
 		<Cards>
 			<img src="../../public/motivacion.avif" alt="" slot="svg" class="size-44">
-			<h1 slot="title" class="font-semibold">Motivación </h1>
+			<h1 slot="title" class="font-semibold text-xl">Motivación </h1>
 			<p slot="content">Estudiar puede ser desafiante, pero cada paso te acerca a tus sueños. Cada libro que lees y tarea que completas te acerca al éxito. Mantén la determinación y recuerda por qué comenzaste. Tu esfuerzo de hoy es una inversión en tu futuro. ¡Tú puedes lograrlo!</p>
 		</Cards>
 		<Cards>
 			<img src="../../public/perseverancia.jpg" alt="" slot="svg" class="size-44">
-			<h1 slot="title" class="font-semibold">Perseverancia</h1>
+			<h1 slot="title" class="font-semibold text-xl">Perseverancia</h1>
 			<p slot="content">La perseverancia en los estudios nos lleva al éxito. A pesar de los desafíos, sigamos adelante. Cada paso nos acerca a nuestros sueños. Aprendamos de los errores y sigamos avanzando con determinación. Con esfuerzo, alcanzaremos nuestras metas académicas. ¡Juntos hacia un futuro brillante!</p>
 		</Cards>
 		<Cards>
 			<img src="../../public/apoyo.avif" alt="" slot="svg" class="size-44">
-			<h1 slot="title" class="font-semibold">Apoyo emocional</h1>
+			<h1 slot="title" class="font-semibold text-xl">Apoyo emocional</h1>
 			<p slot="content">El apoyo emocional es fundamental. Nos fortalece en momentos difíciles, nos motiva a seguir adelante y nos brinda consuelo en tiempos de necesidad. Con el apoyo de quienes nos rodean, podemos superar desafíos y alcanzar nuestras metas con mayor confianza y determinación.</p>
 		</Cards>
 	</section>
 	<!-- 2da Seccion -->
-	<section class="bg-white mt-56 " id="user">
+	<section class="bg-white mt-48 select-none" id="user">
 		<div class="">
 			<div class="h-[180px] "></div>
 			<div class="flex justify-between mx-52">
@@ -56,17 +56,22 @@ import Chart from 'chart.js/auto';
 		</div>
 	</section>
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
-	<div id="div1gra" class=" h-[100px] pt-7 font-semibold hidden">
-		<h2 class="text-white text-center archivo-narrow select-none julius-sans-one-regular text-3xl mb-[100px]">En el siguiente gráfico se observan los resultados acumulados en el cuestionario</h2>
+	<div id="div1gra" class=" h-[150px] pt-12 font-semibold hidden">
+		<h2 class=" text-center select-none julius-sans-one-regular text-4xl mb-[100px] text-[#213625]">En el siguiente gráfico se observan los resultados acumulados</h2>
 	</div>
-	<section id="admin" class="text-black bg-white hidden max-h-[800px] pt-[80px] pb-[90px] text-center">
-		<div class="w-1/2">
+	<section id="admin" class="text-black bg-white hidden max-h-[800px] py-[150px] text-center select-none">
+		<div class="w-1/2 h-[500px] ">
 			<canvas id="myChart" class=""></canvas>
+		</div>
+		<div class="w-1/2  text-center flex items-center px-36 archivo-narrow text-3xl leading-normal text-[#804422]">
+			<p>
+				Estos resultados parten del anterior cuestionario, en el cual se evaluan diferentes aspectos relacionados a los problemas que rodean la desercion escolar, desde entornos familiares y situacion economica hasta el ambiente escolar y el desempeño academico
+			</p>
 		</div>
 	</section>
 	<!-- <div id="div2gra" class=" bg-white h-[100px]"></div> -->
 	<!-- FOOTER -->
-	<footer class="text-white p-16 flex flex-col items-center bg-[#513625]">
+	<footer class="text-white p-16 flex flex-col items-center bg-[#513625] select-none">
 		<div class="flex  justify-center gap-3">
 			<p>_______________________________________________________________</p>
 			<div class="flex gap-3">
@@ -141,14 +146,14 @@ document.addEventListener('DOMContentLoaded', function() {
             maintainAspectRatio: false,
 			layout: {
                 padding: {
-                    right: 100 // Ajuste de margen derecho del gráfico
+                    right: 30 // Ajuste de margen derecho del gráfico
                 }
             },
             plugins: {
                 legend: {
                     position: 'right', // Ubicación de la leyenda (right, left, top, bottom)
 					labels: {
-                        padding: 20, // Ajuste de margen para la leyenda
+                        padding: 30, // Ajuste de margen para la leyenda
 						font: {
                             size: 20 // Tamaño de la fuente de los labels
                         }
@@ -174,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (users.role === "admin") {
 			console.log(users.role)
             let adminSection = document.getElementById("admin");
-            adminSection.style.display = "block";
+            adminSection.style.display = "flex";
 			document.getElementById("div1gra").style.display = "block";
         } else {
 			let adminSection = document.getElementById("admin");
