@@ -6,7 +6,7 @@ import Chart from 'chart.js/auto';
 
 ---
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><Layout tittle="Proyecta Tu Vida">
-	<Header></Header>
+	<Header ></Header>
 	<!-- Imagen principal -->
 	<main class="bg-white">
 		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/salon.svg')] ">
@@ -64,7 +64,7 @@ import Chart from 'chart.js/auto';
 			<canvas id="myChart" class=""></canvas>
 		</div>
 	</section>
-	<!-- <div id="div2gra" class=" bg-white h-[100px]"></div> -->
+	
 	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#513625]">
 		<div class="flex  justify-center gap-3">
@@ -100,7 +100,6 @@ import Chart from 'chart.js/auto';
 	
 </style>
 <script>
-
 document.addEventListener('DOMContentLoaded', function() {
 	var blue= localStorage.getItem('blue');
     var green= localStorage.getItem('green');
@@ -184,7 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 		console.log(users)
 	}
-	
+
+
 	document.addEventListener('DOMContentLoaded', function() {
             VerificarRol();
     });
