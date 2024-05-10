@@ -18,12 +18,12 @@ import Header from '../components/Header.astro';
         <main class="flex justify-center items-center pt-40 ">
             <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
                 <div class="flex flex-col items-center justify-center h-full">
-                    <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#005994] rounded-2xl text-white hover:cursor-pointer select-none" onclick="window.location.href = 'index.html'">
+                    <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer select-none hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150" onclick="window.location.href = 'index.html'">
                         <p>
                             Regresar
                         </p>
                     </div>
-                    <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-purple-300 select-none">
+                    <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422]  select-none">
                         <p>
                             5: Mucho | 4: Un poco | 3: Más o menos | 2: Poco | 1: Muy Poco
                         </p>
@@ -31,11 +31,11 @@ import Header from '../components/Header.astro';
                     <div class="w-2/5 text-center" id="questionid"></div>
                     <div class="h-24"></div>
                     <div class="flex justify-around w-3/4 ">
-                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans1">1</div>
-                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans2">2</div>
-                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans3">3</div>
-                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans4">4</div>
-                        <div class="answer-div select-none hover:scale-125 hover:bg-emerald-300 duration-300 ease-in" id="ans5">5</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans1">1</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans2">2</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans3">3</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans4">4</div>
+                        <div class="answer-div select-none hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans5">5</div>
                     </div>
                     <div id="sendQuest" class=" hidden flex-col items-center">
                         <div class="text-3xl flex flex-col items-center select-none">
@@ -45,7 +45,7 @@ import Header from '../components/Header.astro';
                         </div>
                         <div class="h-[60px]"></div>
                         <div class="inline-block">
-                            <button id="send" class="bg-[#005994] text-white py-2 px-3 rounded-3xl text-xl select-none">Enviar respuestas</button>
+                            <button id="send" class="bg-[#804422] text-white py-2 px-3 rounded-3xl text-xl select-none">Enviar respuestas</button>
                         </div>
                     </div>
                     <div id="mesDiv" class="hidden flex-col items-center px-32 select-none">
