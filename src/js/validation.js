@@ -1,4 +1,6 @@
-
+import Swal from 'sweetalert2';
+    export { Swal };
+import 'sweetalert2/src/sweetalert2.scss'
 let valido = sessionStorage.getItem("loggedUserEmail");
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -29,9 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });   
     }  
 });
+let html = String.raw`
+    <div class="flex" id="account">
+        <img src="../../public/logout_logo.svg" id="img" alt="" class="ml-14">
+        <a href="login" id="button_login" class="ml-2 mr-10">Cerrar Sesión</a>
+    </div>
+`;
 document.addEventListener("DOMContentLoaded", function() {
     if(valido){
-        document.getElementById("button_login").innerText = "Cerrar Sesión"
+        document.getElementById("account").innerHTML = html;
         let button_login = document.getElementById("button_login")
         if(button_login){
             button_login.addEventListener( 'click', function(){
@@ -64,8 +72,18 @@ class User{
 
 
 
-
 //JS DEL LOGIN 
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+    }
+});
 function back(){
     window.location="index.html";
 }
@@ -83,22 +101,30 @@ function Register() {
     let role = document.getElementById("role")
 
     if (name && last_name && email && password && confirmpass) {
-        if (name.value.length > 3 && last_name.value.length > 4) {
+        if (name.value.length > 3 && last_name.value.length > 3) {
             if (validateEmail(email.value) && password.value == confirmpass.value && password.value.length >= 8) {
                 let user = new User(name.value, last_name.value, email.value, password.value, role.value)
                 let userKey = "user_" + email.value
                 localStorage.setItem(userKey, JSON.stringify(user))
-                alert(`Usuario ${user.name} ${user.last_name}, ha sido registrado exitosamente`)
+                Toast.fire({
+                    icon: "success",
+                    title: "Registro Exitoso!"
+                });
                 window.location = "login"
             } else {
-                alert('Error en el registro')
+                Toast.fire({
+                    icon: "error",
+                    title: "Campos Invalidos!"
+                });
             }
         } else {
-            alert('Los campos deben contener al menos 5 caracteres')
+            Toast.fire({
+                icon: "error",
+                title: "Al menos 4 caracteres!"
+            });
         }
     }
 }
-
 function Login() {
     let email = document.getElementById("GET-email")
     let password = document.getElementById("GET-password")
@@ -118,7 +144,10 @@ function Login() {
     if (valido) {
         window.location = "index.html"
     } else {
-        alert("Correo electrónico o contraseña incorrectos")
+        Toast.fire({
+            icon: "error",
+            title: "Credenciales Incorrectas!"
+        });
     }
 }
 
