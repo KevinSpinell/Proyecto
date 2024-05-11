@@ -38,14 +38,14 @@ import Header from '../components/Header.astro';
                             Regresar
                         </p>
                     </div>
-                    <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base">
+                    <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base ">
                         <p>
                             5: Mucho | 4: Un poco | 3: Más o menos | 2: Poco | 1: Muy Poco
                         </p>
                     </div>
-                    <div class="w-2/5 text-center  archivo-narrow text-2xl" id="questionid"></div>
-                    <div class="h-24"></div>
-                    <div class="flex justify-around w-3/4 ">
+                    <div class="w-2/5 h-[150px]  text-center flex items-center archivo-narrow text-3xl justify-center" id="questionid"></div>
+                    <div class="h-12  "></div>
+                    <div class="flex justify-around w-3/4  ">
                         <div class="answer-div hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans1">1</div>
                         <div class="answer-div hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans2">2</div>
                         <div class="answer-div hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans3">3</div>
@@ -63,11 +63,11 @@ import Header from '../components/Header.astro';
                             <button id="send" class="bg-[#804422] text-white py-2 px-3 rounded-3xl text-xl ">Enviar respuestas</button>
                         </div>
                     </div>
-                    <div id="mesDiv" class="hidden flex-col items-center px-32 ">
+                    <div id="mesDiv" class=" flex-col items-center px-32 leading-10">
                         <div class="text-center">
-                            <h3 id="titleMessage" class="text-3xl"></h3>
+                            <h3 id="titleMessage" class="text-3xl julius-sans-one-regular"></h3>
                             <div class="h-[30px]"></div>
-                            <div id="message" class="">
+                            <div id="message" class="archivo-narrow text-lg">
                             </div>
                         </div>
                     </div>
