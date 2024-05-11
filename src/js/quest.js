@@ -127,9 +127,7 @@
     function change_question(){
         switch(numquest){
             case 1:
-            document.getElementById("questionid").innerText="¿Cuánto te gusta la escuela?";
-            document.getElementById("divleft").style.background= "url('/public/quest-img/img1-2.jpg')" ;
-            document.getElementById("divleft").style.backgroundSize = "cover" ;
+                document.getElementById("questionid").innerText="¿Cuánto te gusta la escuela?";
                 break;
             case 2:
                 document.getElementById("questionid").innerText="¿Qué tan cómodo/a te sientes hablando con tus profesores sobre tus problemas?";
