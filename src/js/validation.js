@@ -39,6 +39,7 @@ let html = String.raw`
 `;
 document.addEventListener("DOMContentLoaded", function() {
     if(valido){
+        console.log(valido)
         document.getElementById("account").innerHTML = html;
         let button_login = document.getElementById("button_login")
         if(button_login){
