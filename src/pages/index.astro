@@ -6,7 +6,9 @@ import Chart from 'chart.js/auto';
 const props = Astro.props
 
 ---
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><Layout tittle="NexoEducativo">
+<script  src="../js/who_am.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<Layout tittle="NexoEducativo">
 	<Header ></Header>
 	<!-- Boton de regreso -->
 	<button id="btnSubir" class="hidden fixed bottom-6 right-6 bg-[#3850399d] hover:bg-[#286832] ease-in duration-100 hover:scale-110 text-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10">
@@ -76,6 +78,58 @@ const props = Astro.props
 			</p>
 		</div>
 	</section>
+	<section class="flex justify-center flex-col items-center">
+		<h1 class="text-[#804422] text-6xl text-center mt-12 font-semibold mb-2 julius-sans-one-regular">Quien Quiero Ser?</h1>
+		<div class="grid grid-cols-9 grid-rows-7 gap-4 text-center min-h-[600px] min-w-[1200px] ">
+			<div id="paso_1" class="col-start-2 row-start-2 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">1</div>
+			<div id="paso_2" class="col-start-2 row-start-4 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">2</div>
+			<div id="paso_3" class="col-start-2 row-start-6 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">3</div>
+			<div id="paso_4" class="col-start-4 row-start-6 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">4</div>
+			<div id="paso_5" class="col-start-4 row-start-4 bg-white border-2 border-[#804422] rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">5</div>
+			<div id="paso_6" class="col-start-5 row-start-2 bg-white border-2 border-[#804422] rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">6</div>
+			<div id="paso_7" class="col-start-6 row-start-4 bg-white border-2 border-[#804422] rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">7</div>
+			<div id="paso_8" class="col-start-6 row-start-6 bg-white border-2 border-[#804422] rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">8</div>
+			<div id="paso_9" class="col-start-8 row-start-6 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">9</div>
+			<div id="paso_10" class="col-start-8 col-end-10 row-start-3 row-end-5 bg-white border-2 border-[#804422] rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-2xl" >Meta!</div>
+			<div class="col-start-2 row-start-3 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-180">
+			</div>
+			<div class="col-start-2 row-start-5 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-180">
+			</div>
+			<div class="col-start-3 row-start-6 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-90">
+			</div>
+			<div class="col-start-4 row-start-5 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 ">
+			</div>
+			<div class="col-start-4 row-start-3 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16">
+			</div>
+			<div class="col-start-4 row-start-2 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-90"> 
+			</div>
+			<div class="col-start-6 row-start-2 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-90"> 
+			</div>
+			<div class="col-start-6 row-start-3 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-180">
+			</div>
+			<div class="col-start-6 row-start-5 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-180">
+			</div>
+			<div class="col-start-7 row-start-6 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16 rotate-90"> 
+			</div>
+			<div class="col-start-8 row-start-5 m-auto">
+				<img src="../../public/metas_img/up_arrow.svg" alt="" class="size-16">
+			</div>
+		</div>
+		<div class="flex justify-center py-8 gap-6 items-center">
+			<input type="text" id="meta" placeholder="Escribe tu Meta!" autocomplete="off" class="h-14 border-2 rounded-2xl w-[400px] p-2 border-[#804422] outline-none">
+			<button id="form" class="bg-white text-[#804422] w-[100px] pl-3 pr-3 pt-0 h-14 rounded-2xl mt-5 mb-4 border-2 border-[#804422] hover:text-white hover:bg-[#804422]">Enviar</button>
+		</div>
+		</section>
 	<!-- SECCION DE LA INFORMACION -->
 	<section id="information">
 		<div class="h-[200px] bg-gray-400">
@@ -258,8 +312,5 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
-	document.addEventListener('DOMContentLoaded', function() {
-            VerificarRol();
-    });
 	
 </script>
