@@ -121,6 +121,18 @@ import Chart from 'chart.js/auto';
 			<button id="form" class="bg-white text-[#804422] w-[100px] pl-3 pr-3 pt-0 h-14 rounded-2xl mt-5 mb-4 border-2 border-[#804422] hover:text-white hover:bg-[#804422]">Enviar</button>
 		</div>
 		</section>
+	<!-- SECCION DE LA INFORMACION -->
+	<section id="information">
+		<div class="h-[200px] bg-gray-400">
+			Aquí va la info
+		</div>
+	</section>
+	<!-- SECCION DE SERVICIOS -->
+	<section id="services">
+		<div class="h-[200px] bg-cyan-300">
+			Aquí van los servicios
+		</div>
+	</section>
 	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#513625] select-none">
 		<div class="flex  justify-center gap-3">
@@ -220,6 +232,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Crear el gráfico
     new Chart(ctx, config);
 });
+
+	document.addEventListener('DOMContentLoaded', function() {
+		document.getElementById("infobut").addEventListener('click',function(){
+			const destino1 = document.getElementById("information");
+			const position1 = destino1.offsetTop
+
+			window.scroll({
+				top: position1,
+				behavior: 'smooth'
+			})
+		})
+		document.getElementById("servbut").addEventListener('click',function(){
+			const destino2 = document.getElementById("services");
+			const position2 = destino2.offsetTop
+
+			window.scroll({
+				top: position2,
+				behavior: 'smooth'
+			})
+		})
+	});
+	
 
 
 	function VerificarRol(){
