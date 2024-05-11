@@ -3,10 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Cards from '../components/Cards.astro';
 import Chart from 'chart.js/auto';
+const props = Astro.props
 
 ---
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><Layout tittle="Proyecta Tu Vida">
 	<Header ></Header>
+	<!-- Boton de regreso -->
+	<button id="btnSubir" class="hidden fixed bottom-6 right-6 bg-[#3850399d] hover:bg-[#286832] text-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10">
+		<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" {...props}>
+			<path fill="currentColor" d="M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8l316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496" />
+		</svg>
+	</button>
 	<!-- Imagen principal -->
 	<main class="bg-white select-none">
 		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/salon.svg')] ">
@@ -133,6 +140,9 @@ import Chart from 'chart.js/auto';
 			Aquí van los servicios
 		</div>
 	</section>
+
+	
+	  
 	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#513625] select-none">
 		<div class="flex  justify-center gap-3">
@@ -233,25 +243,48 @@ document.addEventListener('DOMContentLoaded', function() {
     new Chart(ctx, config);
 });
 
+	//  Funcionalidad de botones de Scroll
 	document.addEventListener('DOMContentLoaded', function() {
+
+		var btnSubir = document.getElementById("btnSubir");
+
+		window.addEventListener('scroll',function() {
+			if(window.scrollY != 0) {
+				btnSubir.style.display = 'block'
+			}
+			else {
+				btnSubir.style.display = 'none'
+			}
+		})
+
 		document.getElementById("infobut").addEventListener('click',function(){
 			const destino1 = document.getElementById("information");
 			const position1 = destino1.offsetTop
 
-			window.scroll({
+			window.scrollTo({
 				top: position1,
-				behavior: 'smooth'
+				behavior: 'smooth',
 			})
 		})
 		document.getElementById("servbut").addEventListener('click',function(){
 			const destino2 = document.getElementById("services");
 			const position2 = destino2.offsetTop
 
-			window.scroll({
+			window.scrollTo({
 				top: position2,
-				behavior: 'smooth'
+				behavior: 'smooth',
 			})
 		})
+		document.getElementById("btnSubir").addEventListener('click',function(){
+			const destino3 = document.getElementById("arriba");
+			const position3 = destino3.offsetTop
+
+			window.scrollTo({
+				top: position3,
+				behavior: 'smooth',
+			})
+		})
+		
 	});
 	
 
