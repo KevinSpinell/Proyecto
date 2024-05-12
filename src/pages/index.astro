@@ -7,6 +7,7 @@ const props = Astro.props
 
 ---
 <script  src="../js/who_am.js"></script>
+<script  src="../js/FAQ.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <Layout tittle="NexoEducativo">
 	<Header ></Header>
@@ -68,7 +69,7 @@ const props = Astro.props
 	<div id="div1gra" class=" h-[150px] pt-12 font-semibold hidden">
 		<h2 class=" text-center select-none julius-sans-one-regular text-4xl mb-[100px] text-[#213625]">En el siguiente gráfico se observan los resultados acumulados</h2>
 	</div>
-	<section id="admin" class="text-black bg-white hidden max-h-[800px] py-[150px] text-center select-none">
+	<section id="admin" class="text-black bg-white hidden max-h-[800px] py-[150px] text-center select-none px-16">
 		<div class="w-1/2 h-[500px] ">
 			<canvas id="myChart" class=""></canvas>
 		</div>
@@ -78,8 +79,8 @@ const props = Astro.props
 			</p>
 		</div>
 	</section>
-	<section class="flex justify-center flex-col items-center">
-		<h1 class="text-[#804422] text-6xl text-center mt-12 font-semibold mb-2 julius-sans-one-regular">Quien Quiero Ser?</h1>
+	<section class="flex justify-center flex-col items-center mb-4">
+		<h1 class="text-[#804422] text-4xl text-center mt-12 font-semibold mb-2 julius-sans-one-regular">Quien Quiero Ser?</h1>
 		<div class="grid grid-cols-9 grid-rows-7 gap-4 text-center min-h-[600px] min-w-[1200px] ">
 			<div id="paso_1" class="col-start-2 row-start-2 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">1</div>
 			<div id="paso_2" class="col-start-2 row-start-4 bg-white border-2 border-[#804422]  rounded-full flex items-center justify-center text-[#804422] archivo-narrow text-xl">2</div>
@@ -129,11 +130,147 @@ const props = Astro.props
 			<input type="text" id="meta" placeholder="Escribe tu Meta!" autocomplete="off" class="h-14 border-2 rounded-2xl w-[400px] p-2 border-[#804422] outline-none">
 			<button id="form" class="bg-white text-[#804422] w-[100px] pl-3 pr-3 pt-0 h-14 rounded-2xl mt-5 mb-4 border-2 border-[#804422] hover:text-white hover:bg-[#804422]">Enviar</button>
 		</div>
-		</section>
+	</section>
 	<!-- SECCION DE LA INFORMACION -->
-	<section id="information">
-		<div class="h-[200px] bg-gray-400">
-			Aquí va la info
+	<section id="information" class="pt-10 bg-white">
+		<div class=" text-center box-border">
+			<h1 class="text-[#804422] julius-sans-one-regular text-4xl">Preguntas Frecuentes</h1>
+			<div class="flex mt-5">
+				<div class="w-1/2 p-6">
+					<div class="faq border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Qué es la deserción escolar y por qué es importante abordar este problema?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Cuáles son las señales de que un estudiante pueda estar presentar deserción?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Qué debo hacer si creo que mi hijo/a podría estar en riesgo de deserción?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Cuáles son algunas estrategias efectivas para prevenir la deserción escolar?s</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Dónde puedo encontrar recursos de apoyo para audar a mi hijo en la escuela?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class=" w-1/2 p-6">
+					<div class="faq border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Qué papel desempeñan los maestros en la prevención de la deserción?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Existen programas y ayudas específicas para estudiantes en riesgo?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Cómo puedo comunicarme con la escuela si tengo problemas emocionales?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Qué puedo hacer como estudiante si tengo dificultades en la escuela?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+					<div class="faq mt-4 border-2 border-[#804422] text-[#804422] bg-[#F2E9D8] flex flex-col justify-center p-4 rounded-xl">
+						<div id="pregunta" class="flex justify-between julius-sans-one-regular items-center">
+							<h1 class="font-semibold">¿Cómo puedo saber si mi hijo está en riesgo de deserción?</h1>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: #804422;transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+							</svg>
+						</div>
+						<div id="respuesta" class="mt-3 max-h-0 overflow-hidden answer">
+							<p class="archivo-narrow">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi fuga commodi quidem explicabo itaque minus.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-- SECCION DE SERVICIOS -->
@@ -146,7 +283,7 @@ const props = Astro.props
 
 
 	
-	  
+	
 	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#513625] select-none">
 		<div class="flex  justify-center gap-3">
@@ -168,6 +305,34 @@ const props = Astro.props
 	@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kanit:wght@900&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 	
+	.faq.activo .answer{
+		max-height: 300px;
+		animation: fade 1s ease-in-out;
+	}
+	.answer{
+		transition: max-height 1.4s ease;
+	}
+	.rotate{
+		transform: rotate(90);
+	}
+	.faq.activo svg{
+		transform: rotate(180deg);
+	}
+	svg{
+		transition: transform .4s ease-in;
+	}
+
+	@keyframes fade{
+		from{
+			opacity: 0;
+			transform: translateY(-10px);
+		}to{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+
 	.julius-sans-one-regular {
 		font-family: "Julius Sans One", sans-serif;
 		font-weight: 400;
