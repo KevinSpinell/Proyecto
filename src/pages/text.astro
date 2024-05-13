@@ -3,8 +3,8 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout tittle="Caja de texto">
-        <div class="flex justify-center items-center pt-40" id="select1">
-            <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-[#804422] shadow-xl">
+        <div class="flex justify-center items-center pt-40 archivo-narrow" id="select1">
+            <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-[#804422] shadow-xl archivo-narrow">
                 <div id="next" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer select-none hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150">
                     <p>
                         Siguiente
@@ -14,7 +14,6 @@ import Layout from "../layouts/Layout.astro"
                 <p class="text-center p-4 max-w-md leading-7">
                     ¡Hola!
                     <br>
-
                     Sé que a veces la vida de estudiante puede ser un desafío. Ya sea por el estrés de los exámenes, las preocupaciones sobre el futuro o simplemente los altibajos del día a día, todos enfrentamos momentos difíciles.
                     <br>
                     Quiero recordarte que no estás solo. Hablar sobre tus problemas puede ser el primer paso para sentirte mejor. Ya sea con un amigo, un familiar o un consejero escolar, compartir lo que te está molestando puede ayudar a aliviar la carga.
@@ -33,17 +32,17 @@ import Layout from "../layouts/Layout.astro"
         <div class="hidden" id="select">
             <div class="h-[25vh]" ></div>
             
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center archivo-narrow">
                 <div>
-                    <div class="w-[750px] bg-white p-4 rounded-l-3xl rounded-tr-3xl">
-                <p>Seguimos por esta seccion, seguramente tu picologa te haya recomendado hacer este apartado, no te preocupes, se que te va a gustar. Elige el tema que te sugerieron o de tu interes. </p>
+                    <div class="w-[750px] bg-white p-4 rounded-l-3xl rounded-tr-3xl archivo-narrow">
+                <p>Seguimos por esta sección. Seguramente tu psicóloga te haya recomendado hacer este apartado. No te preocupes, sé que te va a gustar. Elige el tema que te sugirieron o uno de tu interés.</p>
                 </div>
 					<ul class="flex text-white gap-8  font-medium items-center">
                         <a href="#" class="bg-white h-10 flex relative text-lg rounded-full w-[750px]  text-center px-4  text-black items-center group mb-4 mt-4">
-                            Elige la que mas te guste o el que te recomendaron
+                            Elige la opción que más te guste o la que te recomendaron
                             <menu class=" group-hover:block bg-white text-black w-[750px] absolute  hidden -left-[1px] rounded-r-3xl rounded-l-3xl -top-[2px] rounded-xl">
                                 <div class="flex p-2 justify-center animate-slide-in-right">
-                                    <p class="font-semibold">Elige la que mas te guste o el que te recomendaron</p>
+                                    <p class="font-semibold">Elige la opción que más te guste o la que te recomendaron</p>
                                 </div>
                                 <ul class="text-start pl-4 px-4 pb-4 font-normal">
                                     <li class="hover:border-[#804422] border-2 border-transparent p-1 rounded-2xl cursor-pointer" id="option1"></li>
@@ -65,7 +64,7 @@ import Layout from "../layouts/Layout.astro"
             </div>
         </div>
     
-    <div class="flex justify-center items-center pt-40 hidden" id="Box">
+    <div class="flex justify-center items-center pt-40 hidden archivo-narrow" id="Box">
         <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-[#804422] shadow-xl">
             <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer select-none hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150" onclick="window.location.href = 'index.html'">
                 <p>
@@ -75,15 +74,15 @@ import Layout from "../layouts/Layout.astro"
             <div class="p-8 grid grid-cols-2">
 
                 <div class="h-[525px]">
-                    <textarea name="" id="text1" rows="5" cols="33" class="w-full h-full bg-slate-100 rounded-2xl resize-none p-4 focus:" placeholder="Escribe aqui!" ></textarea>
+                    <textarea name="" id="text1" rows="5" cols="33" class="w-full h-full bg-slate-100 rounded-2xl resize-none p-4 archivo-narrow" placeholder="Escribe aqui!" ></textarea>
                 </div>
                 
-                <div class="flex flex-col justify-center items-center ">
+                <div class="flex flex-col justify-center items-center archivo-narrow">
                     <div class="text-center p-4 mb-4">
                         <p>Escribe un texto de <span id="text"></span>, <b>se sincero contigo mismo</b>, no pasara nada con lo que digas.Te vamos a leer 😃<p>
                     </div>
                     <div class="mt-4">
-                        <button type="submit" id="submitButton" class="bg-[#804422]  text-white py-2 px-3 rounded-3xl text-xl archivo-narrow hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-125 duration-150"onclick="window.location.href = 'index.html'">Enviar</button>
+                        <button type="submit" id="submitButton" class="bg-[#804422]  text-white py-2 px-3 rounded-3xl text-xl archivo-narrow hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-125 duration-150">Enviar</button>
                     </div>
                 </div>
                 

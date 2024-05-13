@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("option5").addEventListener("click", option5);
 });
 
+
+
 function option5() {
     let selectElement = document.getElementById('select');
     let selectElement1 = document.getElementById('Box');
@@ -99,7 +101,10 @@ function option5() {
     textarea.focus();
 }
 
-function evaluartext() {
+
+
+function evaluartext(event) {
+    event.preventDefault();
     let a = document.getElementById("text1").value
     if (a== "") {
         Swal.fire({
@@ -108,25 +113,24 @@ function evaluartext() {
             icon: "error"
         })
         return;
+    }else{
+        window.location.href = "/";
     }
     
     a=a.toLowerCase(a);
     let detect = a.split(" ");
-    let SearchWords = [];
     
     let textoUsuario = document.getElementById("text1").value.trim();
-
+    // let topic = document.getElementById("option1").value;
+    let name = localStorage.getItem('name')
+    console.log(name);
 
     const doc = new jsPDF();
-    // To Do arreglar como muestra el texto y el alert
-
-    doc.text(textoUsuario, 10, 10);
-
-
-    doc.save("archivo.pdf");
+                const lines = doc.splitTextToSize(textoUsuario, doc.internal.pageSize.width - 20);
+                doc.text(10, 10, lines);
+                doc.save("archivo"+".pdf");
     
     localStorage.setItem("Texto",a)
 
-    console.log(localStorage.getItem("Texto"));
     a = document.getElementById("text1").value=" "
 }

@@ -29,21 +29,22 @@ const props = Astro.props
 	</main>
 	<!-- 1ra Seccion -->
 	<section class="mt-56 flex justify-center items-center gap-20 select-none">
-		<Cards>
-			<img src="../../public/motivacion.avif" alt="" slot="svg" class="size-44">
-			<h1 slot="title" class="font-semibold text-xl">Motivación </h1>
-			<p slot="content">Estudiar puede ser desafiante, pero cada paso te acerca a tus sueños. Cada libro que lees y tarea que completas te acerca al éxito. Mantén la determinación y recuerda por qué comenzaste. Tu esfuerzo de hoy es una inversión en tu futuro. ¡Tú puedes lograrlo!</p>
-		</Cards>
-		<Cards>
-			<img src="../../public/perseverancia.jpg" alt="" slot="svg" class="size-44">
-			<h1 slot="title" class="font-semibold text-xl">Perseverancia</h1>
-			<p slot="content">La perseverancia en los estudios nos lleva al éxito. A pesar de los desafíos, sigamos adelante. Cada paso nos acerca a nuestros sueños. Aprendamos de los errores y sigamos avanzando con determinación. Con esfuerzo, alcanzaremos nuestras metas académicas. ¡Juntos hacia un futuro brillante!</p>
-		</Cards>
-		<Cards>
-			<img src="../../public/apoyo.avif" alt="" slot="svg" class="size-44">
-			<h1 slot="title" class="font-semibold text-xl">Apoyo emocional</h1>
-			<p slot="content">El apoyo emocional es fundamental. Nos fortalece en momentos difíciles, nos motiva a seguir adelante y nos brinda consuelo en tiempos de necesidad. Con el apoyo de quienes nos rodean, podemos superar desafíos y alcanzar nuestras metas con mayor confianza y determinación.</p>
-		</Cards>
+
+			<Cards>
+				<img src="../../public/motivacion.avif" alt="" slot="svg" class="size-44">
+				<h1 slot="title" class="font-semibold text-xl">Motivación</h1>
+				<p slot="content">Estudiar puede ser desafiante, pero cada paso te acerca a tus sueños. Cada libro que lees y tarea que completas te acerca al éxito. Mantén la determinación y recuerda por qué comenzaste. Tu esfuerzo de hoy es una inversión en tu futuro. ¡Tú puedes lograrlo! </p>
+			</Cards>
+			<Cards>
+				<img src="../../public/perseverancia.jpg" alt="" slot="svg" class="size-44">
+				<h1 slot="title" class="font-semibold text-xl">Perseverancia</h1>
+				<p slot="content">La perseverancia en los estudios nos lleva al éxito. A pesar de los desafíos, sigamos adelante. Cada paso nos acerca a nuestros sueños. Aprendamos de los errores y sigamos avanzando con determinación. Con esfuerzo, alcanzaremos nuestras metas académicas. ¡Juntos hacia un futuro brillante!</p>
+			</Cards>
+			<Cards>
+				<img src="../../public/apoyo.avif" alt="" slot="svg" class="size-44"/>
+				<h1 slot="title" class="font-semibold text-xl">Apoyo emocional</h1>
+				<p slot="content">El apoyo emocional es fundamental. Nos fortalece en momentos difíciles, nos motiva a seguir adelante y nos brinda consuelo en tiempos de necesidad. Con el apoyo de quienes nos rodean, podemos superar desafíos y alcanzar nuestras metas con mayor confianza y determinación.</p>
+			</Cards>
 	</section>
 	<!-- 2da Seccion -->
 	<section class="bg-white mt-48 select-none" id="user">
@@ -347,6 +348,7 @@ const props = Astro.props
 	
 </style>
 <script>
+
 document.addEventListener('DOMContentLoaded', function() {
 	var blue= localStorage.getItem('blue');
     var green= localStorage.getItem('green');
