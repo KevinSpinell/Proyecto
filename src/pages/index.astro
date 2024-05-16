@@ -50,7 +50,7 @@ const props = Astro.props
 	<!-- Seccion de encuestas -->
 	<section class="bg-white select-none" id="user">
 		<div class="">
-			<div class="h-[180px] "></div>
+			<div class="h-[100px] "></div>
 			<div class="flex justify-between mx-2">
 				<img src="../../public/encues.svg" alt="" class="">
 				<div class="flex flex-col justify-center items-center gap-[15px] ">
@@ -71,9 +71,12 @@ const props = Astro.props
 		</div>
 	</section>
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
+	<div class="bg-gradient-to-b from-white to-[#F2E9D8] h-[150px] "></div>
 	<div id="div1gra" class=" h-[150px] pt-12 font-semibold hidden">
 		<h2 class=" text-center select-none julius-sans-one-regular text-4xl mb-[100px] text-[#213625]">En el siguiente gráfico se observan los resultados acumulados</h2>
 	</div>
+	<div class="bg-gradient-to-b from-[#F2E9D8] to-white h-[150px] "></div>
+
 	<section id="admin" class="text-black bg-white hidden max-h-[800px] py-[150px] text-center select-none px-16">
 		<div class="w-1/2 h-[500px] ">
 			<canvas id="myChart" class=""></canvas>
@@ -331,7 +334,7 @@ const props = Astro.props
 	<div class="h-[100px] bg-white"></div>
 	<!-- SECCION DE SERVICIOS -->
 	<section id="services" class="bg-[url('/public/campus.jpg')] bg-cover bg-center bg-no-repeat  ">
-		<div class="py-16 bg-[#945531e3]">
+		<div class="py-16 bg-[#945531e3] text-white">
 			<div class=" flex flex-col ml-[110px] ">
 				<div>
 					<p class="julius-sans-one-regular text-2xl text-white mb-5">Si quieres conseguir ayuda especializada sobre tu situación puedes comunicarte a través de:</p>
@@ -378,7 +381,7 @@ const props = Astro.props
 
 	<!-- FOOTER -->
 	<footer class="text-white p-16 flex flex-col items-center bg-[#513625] select-none">
-		<div class="flex  justify-center gap-3">
+		<div class="flex mt-6 justify-center gap-3">
 			<p>_______________________________________________________________</p>
 			<div class="flex gap-3">
 				<img src="/public/facebook.svg" alt="">
@@ -390,7 +393,7 @@ const props = Astro.props
 			<p>_______________________________________________________________</p>
 		</div>
 		<h1 class="julius-sans-one-regular text-2xl mt-8">Futuro en Marcha</h1>
-		<p class="archivo-narrow mt-3">Copyrigth © 2024 Rioters Inc.</p>
+		<p class="archivo-narrow mt-3 mb-6">Copyrigth © 2024 Rioters Inc.</p>
 	</footer>
 </Layout>
 <style is:global>
