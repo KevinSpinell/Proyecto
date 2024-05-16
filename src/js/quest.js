@@ -59,7 +59,6 @@
     function ans2quest1(){
         near++;
         numquest++;
-        console.log(gone, good, far, numquest)
         lights2()
     }
     document.getElementById("ans2").addEventListener("click",ans2quest1)
@@ -171,7 +170,7 @@
             case 15:
                 document.getElementById("questionid").innerText="¿Qué tan seguro/a te sientes en tu capacidad para enfrentar los desafíos académicos?";
                 break;
-            case 16:
+            default:
                 showButton();
         }
     }
@@ -185,10 +184,10 @@
         document.getElementById("help").style.display = "none";
         document.getElementById("sendQuest").style.display = "flex";
     }
-    var good=0;
-    var far=0;
-    var near=0;
-    var gone=0;
+    // var good=0;
+    // var far=0;
+    // var near=0;
+    // var gone=0;
     function showMessage(){
         document.getElementById("sendQuest").style.display = "none";
         //Mensaje cuando no hay riesgo
