@@ -1,4 +1,5 @@
 let paso = 0;
+import html2canvas from 'html2canvas';
 function who_am(){
     console.log("hoola")
     let input = document.getElementById("meta").value;
@@ -7,6 +8,7 @@ function who_am(){
         case 0:
             console.log(paso)
             console.log(placeholder)
+            let trans = document.getElementById("paso_10")
             document.getElementById("paso_10").innerText = input;
             document.getElementById("meta").placeholder = placeholder;
             input = document.getElementById("meta").value = "";
@@ -56,10 +58,29 @@ function who_am(){
             document.getElementById("paso_9").innerText = input;
             document.getElementById("meta").setAttribute("placeholder", placeholder);
             input = document.getElementById("meta").value = "";
+            let button = document.getElementById("form")
+            let show = document.getElementById("text_dow");
+            let remove = document.getElementById("meta");
+            remove.classList.add("hidden")
+            show.classList.remove("hidden")
+            button.classList.add("hidden")
+            download();
             break;
     }
     paso += 1;
 }
+
+    function download() {
+        const section = document.getElementById('who_im');
+        html2canvas(section).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.href = imgData;
+            link.download = 'HojaDeRuta.png';
+            link.click();
+        });
+    }
+
 function enviar(){
     if(paso<=9){
         who_am();
