@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kanit:wght@900&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+	
+	.julius-sans-one-regular {
+		font-family: "Julius Sans One", sans-serif;
+		font-weight: 400;
+        font-style: normal;
+	}
+	.archivo-narrow {
+		font-family: "Archivo Narrow", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: <weight>;
+		font-style: normal;
+	}
+    .answer-div{
+        border: 1px solid rgb(187, 186, 186);
+        padding: 5px;
+        border-radius: 100%;
+        padding: 12px 20px;
+    }
+    .answer-div:hover{
+        cursor: pointer;
+    }
+
+</style>
+
+<Layout tittle="Test Visual">
+    <main class="flex justify-center items-center pt-40 select-none">
+        <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
+            <div class="flex flex-col items-center justify-center h-full">
+                <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150" onclick="window.location.href = 'index.html'">
+                    <p>
+                        Regresar
+                    </p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </main>
+</Layout>
