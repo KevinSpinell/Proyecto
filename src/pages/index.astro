@@ -71,11 +71,11 @@ const props = Astro.props
 		</div>
 	</section>
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
-	<div class="bg-gradient-to-b from-white to-[#F2E9D8] h-[150px] "></div>
+	<div id="div2gra" class="bg-gradient-to-b from-white to-[#F2E9D8] h-[150px] hidden"></div>
 	<div id="div1gra" class=" h-[150px] pt-12 font-semibold hidden">
 		<h2 class=" text-center select-none julius-sans-one-regular text-4xl mb-[100px] text-[#213625]">En el siguiente gráfico se observan los resultados acumulados</h2>
 	</div>
-	<div class="bg-gradient-to-b from-[#F2E9D8] to-white h-[150px] "></div>
+	<div id="div3gra" class="bg-gradient-to-b from-[#F2E9D8] to-white h-[150px] hidden"></div>
 
 	<section id="admin" class="text-black bg-white hidden max-h-[800px] py-[150px] text-center select-none px-16">
 		<div class="w-1/2 h-[500px] ">
@@ -563,9 +563,13 @@ document.addEventListener('DOMContentLoaded', function() {
             let adminSection = document.getElementById("admin");
             adminSection.style.display = "flex";
 			document.getElementById("div1gra").style.display = "block";
+			document.getElementById("div2gra").style.display = "block";
+			document.getElementById("div3gra").style.display = "block";
         } else {
 			let adminSection = document.getElementById("admin");
 			document.getElementById("div1gra").style.display = "none";
+			document.getElementById("div2gra").style.display = "none";
+			document.getElementById("div3gra").style.display = "none";
             adminSection.style.display = "none";
 			console.log(users.role)
         }
