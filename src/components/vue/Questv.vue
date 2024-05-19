@@ -12,15 +12,40 @@
 
 
     // let quality = ref(["Muy poco","Poco","Más o menos","Un poco","Mucho"])
-    const bg_grad = ref([
-        "bg-gradient-to-r from-[#eeab2f] to-[#f2e9d8]"
-    ])
+    const bg_grad = [
+        "bg-gradient-to-r from-[#eeab2f] to-[#f2e9d8]",
+        "bg-gradient-to-r from-[#ECAD39] to-[#ECDDC0]",
+        "bg-gradient-to-r from-[#EAB34D] to-[#E7D3AD]",
+        "bg-gradient-to-r from-[#E5BA6A] to-[#E4C894]",
+        "bg-gradient-to-r from-[#EAC47F] to-[#E9C37D]",
+        "bg-gradient-to-r from-[#E7CA94] to-[#E5B65D]",
+        "bg-gradient-to-r from-[#E7CA94] to-[#E5B65D]",
+        "bg-gradient-to-r from-[#EED9B2] to-[#E4A939]",
+        "bg-gradient-to-r from-[#EFE6D6] to-[#E5A120]",
+
+        "bg-gradient-to-r from-[#EED9B2] to-[#E4A939]",
+        "bg-gradient-to-r from-[#E7CA94] to-[#E5B65D]",
+        "bg-gradient-to-r from-[#EAC47F] to-[#E9C37D]",
+        "bg-gradient-to-r from-[#E5BA6A] to-[#E4C894]",
+        "bg-gradient-to-r from-[#EAB34D] to-[#E7D3AD]",
+        "bg-gradient-to-r from-[#EAB34D] to-[#E7D3AD]",
+        "bg-gradient-to-r from-[#ECAD39] to-[#ECDDC0]",
+        "bg-gradient-to-r from-[#eeab2f] to-[#f2e9d8]",
+
+    ]
     const gradientesArray = [
-  "bg-[#F2E9D8]", "bg-[#FDFFD4]", "bg-[#FCFAC9]", "bg-[#FBF4BE]", "bg-[#FAEFB3]",
-  "bg-[#F9EAA8]", "bg-[#F8E49D]", "bg-[#F7DE92]", "bg-[#F6D887]", "bg-[#F5D27C]",
-  "bg-[#F4CD71]", "bg-[#F3C766]", "bg-[#F2C25B]", "bg-[#F1BD50]", "bg-[#F0B745]",
-  "bg-[#EFB13A]", "bg-[#EEAB2F]"
-];
+    "bg-[#F2E9D8]", "bg-[#FDFFD4]", "bg-[#FCFAC9]", "bg-[#FBF4BE]", "bg-[#FAEFB3]",
+    "bg-[#F9EAA8]", "bg-[#F8E49D]", "bg-[#F7DE92]", "bg-[#F6D887]", "bg-[#F5D27C]",
+    "bg-[#F4CD71]", "bg-[#F3C766]", "bg-[#F2C25B]", "bg-[#F1BD50]", "bg-[#F0B745]",
+    "bg-[#EFB13A]", "bg-[#EEAB2F]"
+    ];
+
+    const stickers = [
+        "hidden","bg-[url('/public/emotes/Velkoz.png')] left-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Lux.png')] right-[8%] bottom-[20%]","hidden",
+        "bg-[url('/public/emotes/Braum.webp')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Teemo.png')] left-[8%] bottom-[20%]","hidden",
+        "bg-[url('/public/emotes/Blitz.webp')] right-[8%] bottom-[20%]","hidden","bg-[url('/public/emotes/Ziggs.png')] left-[8%] top-[20%]","hidden",
+        "bg-[url('/public/emotes/MissFortune.png')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Pengu2.webp')] left-[8%] top-[20%]"
+    ]
 
 
    
@@ -52,7 +77,7 @@
     
 </style>
 <template>
-        <main class="h-lvh duration-100 ease-in" :class="gradientesArray[count]">
+        <main class="h-lvh" :class="gradientesArray[count]">
             <div class="flex justify-center items-center pt-40 select-none">
                 <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
                     <div class="flex flex-col items-center justify-center h-full">
@@ -60,6 +85,9 @@
                             <p>
                                 Regresar
                             </p>
+                        </div>
+                        <div class="absolute w-[300px] h-[300px] bg-cover" :class="stickers[count]">
+                            
                         </div>
                         <!-- <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base ">
                             <p>
@@ -90,11 +118,6 @@
                                 <div>Mucho</div>
                             </div>
                         </div>
-                        <!-- <div class="flex justify-around w-3/4 border border-black"  >
-                            <div v-for="qty in quality">
-                                {{ qty }}
-                            </div>
-                        </div> -->
                         <div id="sendQuest" class=" hidden flex-col items-center">
                             <div class="text-3xl flex flex-col items-center ">
                                 <h3>Nos alegra que hayas respondido todas las preguntas</h3>
