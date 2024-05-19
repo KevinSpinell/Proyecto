@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Cards from '../components/Cards.astro';
+import Sliderin from '../components/vue/Sliderin.vue';
 import Chart from 'chart.js/auto';
 const props = Astro.props
 
@@ -12,13 +13,13 @@ const props = Astro.props
 <Layout tittle="Futuro en Marcha">
 	<Header ></Header>
 	<!-- Boton de regreso -->
-	<button id="btnSubir" class="fixed bottom-6 right-6 bg-[#3850399d] hover:bg-[#286832] ease-in duration-300 transition-opacity hover:scale-110 opacity-0  text-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10">
+	<button id="btnSubir" class="fixed bottom-6 right-6 bg-[#3850399d] hover:bg-[#286832] ease-in duration-300 hover:scale-110 opacity-0  text-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10">
 		<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" {...props}>
 			<path fill="currentColor" d="M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8l316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496" />
 		</svg>
 	</button>
 	<!-- Imagen principal -->
-	<main class="bg-white select-none">
+	<main class="select-none">
 		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/salon.svg')] ">
 			<div class="flex flex-col justify-center items-center drop-shadow-2xl mb-16">
 				<h2 class="julius-sans-one-regular text-8xl text-white  font-black filter font" style="filter: drop-shadow(5px 5px 1px #000000);">Futuro en Marcha</h2>
@@ -27,8 +28,10 @@ const props = Astro.props
 		</div>
 		<div></div>
 	</main>
+	<!-- Slidder Información -->
+	<Sliderin client:load />
 	<!-- 1ra Seccion -->
-	<section class="mt-56 flex justify-center items-center gap-20 select-none">
+	<section class="mt-10 flex justify-center items-center gap-20 select-none">
 
 			<Cards>
 				<img src="../../public/motivacion.avif" alt="" slot="svg" class="size-44">
