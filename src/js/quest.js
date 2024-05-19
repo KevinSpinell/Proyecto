@@ -1,3 +1,5 @@
+
+
     var good=0; //No hay riesgo de desercion
     var far=0; //Casi no hay riesgo de desercion
     var near=0; //Hay ligero riesgo de desercion
@@ -176,12 +178,7 @@
     }
     function showButton(){
         document.getElementById("questionid").style.display = "none";
-        document.getElementById("ans1").style.display = "none";
-        document.getElementById("ans2").style.display = "none";
-        document.getElementById("ans3").style.display = "none";
-        document.getElementById("ans4").style.display = "none";
-        document.getElementById("ans5").style.display = "none";
-        document.getElementById("help").style.display = "none";
+        document.getElementById("anscont").classList.add("hidden")
         document.getElementById("sendQuest").style.display = "flex";
     }
     // var good=0;
