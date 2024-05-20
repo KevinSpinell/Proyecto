@@ -44,7 +44,7 @@
         "hidden","bg-[url('/public/emotes/Velkoz.png')] left-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Lux.png')] right-[8%] bottom-[20%]","hidden",
         "bg-[url('/public/emotes/Braum.webp')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Teemo.png')] left-[8%] bottom-[20%]","hidden",
         "bg-[url('/public/emotes/Blitz.webp')] right-[8%] bottom-[20%]","hidden","bg-[url('/public/emotes/Ziggs.png')] left-[8%] top-[20%]","hidden",
-        "bg-[url('/public/emotes/MissFortune.png')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Pengu2.webp')] left-[8%] top-[20%]"
+        "bg-[url('/public/emotes/MissFortune.png')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Pengu2.webp')] left-[8%] top-[20%]","hidden"
     ]
 
 
@@ -77,7 +77,7 @@
     
 </style>
 <template>
-        <main class="h-lvh" :class="gradientesArray[count]">
+        <main class="h-lvh transition-all duration-700" :class="gradientesArray[count]">
             <div class="flex justify-center items-center pt-40 select-none">
                 <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
                     <div class="flex flex-col items-center justify-center h-full">
@@ -86,7 +86,7 @@
                                 Regresar
                             </p>
                         </div>
-                        <div class="absolute w-[300px] h-[300px] bg-cover" :class="stickers[count]">
+                        <div class="absolute w-[300px] h-[300px] bg-cover " :class="stickers[count]">
                             
                         </div>
                         <!-- <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base ">
@@ -126,7 +126,7 @@
                             </div>
                             <div class="h-[60px]"></div>
                             <div class="inline-block">
-                                <button id="send" class="bg-[#804422] text-white py-2 px-3 rounded-3xl text-xl ">Enviar respuestas</button>
+                                <button id="send" class="bg-[#804422] text-white py-2 px-3 rounded-3xl text-xl ease-in duration-300 hover:scale-110 hover:bg-white hover:text-[#804422] border hover:border-[#804422]">Enviar respuestas</button>
                             </div>
                         </div>
                         <div id="mesDiv" class=" flex-col items-center px-32 leading-10">

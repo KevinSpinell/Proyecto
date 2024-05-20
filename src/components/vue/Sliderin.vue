@@ -1,5 +1,5 @@
 <template>
-    <div class="slider-container overflow-hidden relative">
+    <div class="slider-container overflow-hidden relative select-none">
         <div
         class="slider flex transition-transform duration-700 ease-in-out"
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
