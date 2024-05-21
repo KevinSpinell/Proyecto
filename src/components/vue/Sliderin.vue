@@ -1,21 +1,23 @@
 <template>
-    <div class="slider-container overflow-hidden relative">
+    <div class="slider-container overflow-hidden relative ">
         <div
-        class="slider flex transition-transform duration-700 ease-in-out"
+        class="slider flex transition-transform duration-700 ease-in-out "
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
         >
-            <div class="slide flex-shrink-0 w-full h-full mt-[150px] mb-[150px] border border-blue-700 ">
-                <div class="border border-black w-[1400px] ml-[200px] my-[100px] flex items-center text-center gap-[80px] justify-center"  >
-                    <div class="julius-sans-one-regular text-5xl mr-[40px]">
+            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] ">
+                <div class=" w-[1400px] border-[6px] border-white  ml-[200px] my-[100px] flex  items-center text-center  justify-center bg-[url('/public/deser.jpg')]"  >
+                    <div class="bg-[#ffffffa9] p-12 flex justify-center items-center gap-[80px]">
+                      <div class="julius-sans-one-regular text-[#804422] text-5xl mr-[40px]">
                         Deserción en estudiantes
-                    </div>
-                    <div class="archivo-narrow text-2xl h-auto w-1/3">
-                        <p class="leading-9">La deserción escolar es el abandono prematuro del sistema educativo por parte de estudiantes antes de completar la etapa de educación obligatoria o de alcanzar el nivel educativo que estaban cursando. Este fenómeno puede ocurrir en cualquier nivel de la educación, desde la primaria hasta la educación secundaria o superior. La deserción escolar es un problema significativo que puede tener consecuencias a largo plazo tanto para los individuos como para la sociedad en general.</p>
+                      </div>
+                      <div class="archivo-narrow text-2xl h-auto w-1/3">
+                          <p class="leading-9 text-[#804422]">La deserción escolar es el abandono prematuro del sistema educativo por parte de estudiantes antes de completar la etapa de educación obligatoria o de alcanzar el nivel educativo que estaban cursando. Este fenómeno puede ocurrir en cualquier nivel de la educación, desde la primaria hasta la educación secundaria o superior. La deserción escolar es un problema significativo que puede tener consecuencias a largo plazo tanto para los individuos como para la sociedad en general.</p>
+                      </div>
                     </div>
                 </div>
 
             </div>
-            <div class="slide flex-shrink-0 w-full h-full mt-[150px] mb-[150px] border border-blue-700 ">
+            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] border border-blue-700 ">
                 <div class="border border-black w-[1400px] ml-[200px] my-[100px] flex items-center text-center gap-[80px] justify-center"  >
                     <div class="julius-sans-one-regular text-5xl mr-[150px]">
                         <img src="/public/objetivo.jpg" width="250px" alt="">
@@ -71,29 +73,29 @@
   
   <style scoped>
   	@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kanit:wght@900&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 
-  .slider-container {
-    width: 100%;
-  }
-  
-  .slider {
-    display: flex;
-    width: 300%; /* 100% for each of the 3 slides */
-  }
-  
-  .slide {
-    width: 100%;
-  }
-	.julius-sans-one-regular {
-		font-family: "Julius Sans One", sans-serif;
-		font-weight: 400;
-        font-style: normal;
-	}
-	.archivo-narrow {
-		font-family: "Archivo Narrow", sans-serif;
-		font-optical-sizing: auto;
-		font-weight: <weight>;
-		font-style: normal;
-	}
+    .slider-container {
+      width: 100%;
+    }
+    
+    .slider {
+      display: flex;
+      width: 300%; /* 100% for each of the 3 slides */
+    }
+    
+    .slide {
+      width: 100%;
+    }
+    .julius-sans-one-regular {
+      font-family: "Julius Sans One", sans-serif;
+      font-weight: 400;
+          font-style: normal;
+    }
+    .archivo-narrow {
+      font-family: "Archivo Narrow", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
   </style>
