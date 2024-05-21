@@ -1,9 +1,9 @@
 
 
-    var good=0; //No hay riesgo de desercion
-    var far=0; //Casi no hay riesgo de desercion
-    var near=0; //Hay ligero riesgo de desercion
-    var gone=0; //Hay mucho riesgo de desercion
+    var good=0; //No hay riesgo de deserción
+    var far=0; //Casi no hay riesgo de deserción
+    var near=0; //Hay ligero riesgo de deserción
+    var gone=0; //Hay mucho riesgo de deserción
 
     var numquest=0; //Contador de las preguntas
 
