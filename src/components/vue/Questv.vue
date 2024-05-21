@@ -40,12 +40,12 @@
     "bg-[#EFB13A]", "bg-[#EEAB2F]"
     ];
 
-    const stickers = [
-        "hidden","bg-[url('/public/emotes/Velkoz.png')] left-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Lux.png')] right-[8%] bottom-[20%]","hidden",
-        "bg-[url('/public/emotes/Braum.webp')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Teemo.png')] left-[8%] bottom-[20%]","hidden",
-        "bg-[url('/public/emotes/Blitz.webp')] right-[8%] bottom-[20%]","hidden","bg-[url('/public/emotes/Ziggs.png')] left-[8%] top-[20%]","hidden",
-        "bg-[url('/public/emotes/MissFortune.png')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Pengu2.webp')] left-[8%] top-[20%]","hidden"
-    ]
+    // const stickers = [
+    //     "hidden","bg-[url('/public/emotes/Velkoz.png')] left-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Lux.png')] right-[8%] bottom-[20%]","hidden",
+    //     "bg-[url('/public/emotes/Braum.webp')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Teemo.png')] left-[8%] bottom-[20%]","hidden",
+    //     "bg-[url('/public/emotes/Blitz.webp')] right-[8%] bottom-[20%]","hidden","bg-[url('/public/emotes/Ziggs.png')] left-[8%] top-[20%]","hidden",
+    //     "bg-[url('/public/emotes/MissFortune.png')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Pengu2.webp')] left-[8%] top-[20%]","hidden"
+    // ]
 
 
    
@@ -86,9 +86,6 @@
                                 Regresar
                             </p>
                         </div>
-                        <div class="absolute w-[300px] h-[300px] bg-cover " :class="stickers[count]">
-                            
-                        </div>
                         <!-- <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base ">
                             <p>
                                 5: Mucho | 4: Un poco | 3: Más o menos | 2: Poco | 1: Muy Poco
@@ -119,13 +116,13 @@
                             </div>
                         </div>
                         <div id="sendQuest" class=" hidden flex-col items-center">
-                            <div class="text-3xl flex flex-col items-center ">
+                            <div class="text-3xl flex flex-col items-center  archivo-narrow">
                                 <h3>Nos alegra que hayas respondido todas las preguntas</h3>
                                 <div class="h-[10px]"></div>
                                 <h3>Es hora de enviar las respuestas</h3>
                             </div>
                             <div class="h-[60px]"></div>
-                            <div class="inline-block">
+                            <div class="inline-block archivo-narrow">
                                 <button id="send" class="bg-[#804422] text-white py-2 px-3 rounded-3xl text-xl ease-in duration-300 hover:scale-110 hover:bg-white hover:text-[#804422] border hover:border-[#804422]">Enviar respuestas</button>
                             </div>
                         </div>
