@@ -1,10 +1,10 @@
 <template>
-    <div class="slider-container overflow-hidden relative ">
+    <div class="slider-container overflow-hidden relative select-none">
         <div
         class="slider flex transition-transform duration-700 ease-in-out "
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
         >
-            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] ">
+            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] border-2 border-blue-700">
                 <div class=" w-[1400px] border-[6px] border-white  ml-[200px] my-[100px] flex  items-center text-center  justify-center bg-[url('/public/deser.jpg')]"  >
                     <div class="bg-[#ffffffa9] p-12 flex justify-center items-center gap-[80px]">
                       <div class="julius-sans-one-regular text-[#804422] text-5xl mr-[40px]">
@@ -15,9 +15,9 @@
                       </div>
                     </div>
                 </div>
-
             </div>
-            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] border border-blue-700 ">
+
+            <div class="slide flex-shrink-0 w-full h-[744px] mt-[75px] mb-[150px] items-center flex border border-blue-700 ">
                 <div class="border border-black w-[1400px] ml-[200px] my-[100px] flex items-center text-center gap-[80px] justify-center"  >
                     <div class="julius-sans-one-regular text-5xl mr-[150px]">
                         <img src="/public/objetivo.jpg" width="250px" alt="">
@@ -27,9 +27,9 @@
                     </div>
                 </div>
             </div>
+
             <div class="slide flex-shrink-0 w-full h-full">
                 Slide 3
-
             </div>
         </div>
         <button @click="prevSlide" class="absolute left-[50px] top-1/2 transform -translate-y-1/2 bg-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10 ease-in duration-200 hover:scale-110 opacity-70 hover:opacity-100 ">
