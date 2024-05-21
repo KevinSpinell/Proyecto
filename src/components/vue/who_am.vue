@@ -3,9 +3,24 @@
     import { ref } from 'vue'
     const tasks = ref([]);
     const inputTasks = ref();
+    let step = 1;
     function addTask(){
-        tasks.value.push(inputTasks.value)
-        inputTasks.value = ''
+        let aja = inputTasks.value
+        if(step<=12 && aja.length > 5){
+            tasks.value.push(inputTasks.value)
+            inputTasks.value = ''
+            if(step>0){
+                document.getElementById("meta").placeholder ="Escribe el paso "+ step
+            }
+            step ++;
+        }else if(step<=12){
+            console.log("hila")
+            document.getElementById("meta").value = ""
+            document.getElementById("meta").placeholder ="Escribe el paso "+ step + " (Debe ser mayor a 5 carácteres)"
+        }else{
+            document.getElementById("agg").classList.add("hidden");
+            document.getElementById("meta").classList.add("hidden");
+        }
     }
     
     function download() {

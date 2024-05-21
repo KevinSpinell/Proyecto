@@ -28,9 +28,15 @@ const props = Astro.props
 		</div>
 		<div></div>
 	</main>
+
+
+
 	<!-- Slidder Información -->
 	<Sliderin client:load />
 	<!-- 1ra Seccion -->
+
+
+
 	<section class="mt-10 flex justify-center items-center gap-20 select-none">
 
 			<Cards>
@@ -50,6 +56,9 @@ const props = Astro.props
 			</Cards>
 	</section>
 	<div class="bg-gradient-to-b from-[#F2E9D8] to-white h-[150px] "></div>
+
+
+
 	<!-- Seccion de encuestas -->
 	<section class="bg-white select-none" id="user">
 		<div class="">
@@ -73,13 +82,15 @@ const props = Astro.props
 			<div class="h-[180px] "></div>
 		</div>
 	</section>
+
+
+
 	<!-- SECCION DE GRAFICAS Y RESULTADOS -->
 	<div id="div2gra" class="bg-gradient-to-b from-white to-[#F2E9D8] h-[150px] hidden"></div>
 	<div id="div1gra" class=" h-[150px] pt-12 font-semibold hidden">
-		<h2 class=" text-center select-none julius-sans-one-regular text-4xl mb-[100px] text-[#213625]">En el siguiente gráfico se observan los resultados acumulados</h2>
+		<h2 class=" text-center select-none julius-sans-one-regular text-4xl  text-[#213625]">En el siguiente gráfico se observan los resultados acumulados</h2>
 	</div>
-	<div id="div3gra" class="bg-gradient-to-b from-[#F2E9D8] to-white h-[150px] hidden"></div>
-
+	<div id="div3gra" class="bg-gradient-to-b from-[#F2E9D8] to-white h-[100px] hidden"></div>
 	<section id="admin" class="text-black bg-white hidden max-h-[800px] py-[150px] text-center select-none px-16">
 		<div class="w-1/2 h-[500px] ">
 			<canvas id="myChart" class=""></canvas>
@@ -90,15 +101,27 @@ const props = Astro.props
 			</p>
 		</div>
 	</section>
+
+
+
+
 	<!-- SECCION DE RUTA DE OBJETIVO -->
 	<div class="bg-gradient-to-b from-white to-[#F2E9D8] h-[150px] "></div>
 	<WHO client:only/>
 	<div class="bg-gradient-to-b from-[#F2E9D8] to-white h-[150px] "></div>
 
+
+
+
 	<!-- SECCION DE LA INFORMACION -->
 	<FAQ />
 	<div class="h-[100px] bg-white"></div>
 	<!-- SECCION DE SERVICIOS -->
+
+
+
+
+
 	<section id="services" class="bg-[url('/public/campus.jpg')] bg-cover bg-center bg-no-repeat  ">
 		<div class="py-16 bg-[#945531e3] text-white">
 			<div class=" flex flex-col ml-[110px] ">
