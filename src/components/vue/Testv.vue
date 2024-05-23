@@ -87,7 +87,7 @@
                         <div class="h-4"></div>
                         <div class="flex justify-around w-3/4 archivo-narrow">
                             <div class="rounded-2xl border-2 border-[#804422] w-3/5 h-[40px] flex justify-center py-1 px-2">
-                                <input id="see" type="text" placeholder="Escribe lo que ves" maxlength="100" autocomplete="off" class=" w-full outline-none" >
+                                <input id="see" type="text" placeholder="Escribe lo que ves" maxlength="32" autocomplete="off" class=" w-full outline-none" >
                             </div>
                         </div>
                         <div class="inline-block mt-[20px]">

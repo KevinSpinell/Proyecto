@@ -1,5 +1,15 @@
-
+import jsPDF from 'jspdf';
 var L1 = null;
+const imgData = "../../public/test_visual/Lamina1.jpg"
+const imgData2 = "../../public/test_visual/Lamina2.jpg"
+const imgData3 = "../../public/test_visual/Lamina3.jpg"
+const imgData4 = "../../public/test_visual/Lamina4.jpg"
+const imgData5 = "../../public/test_visual/Lamina5.jpg"
+const imgData6 = "../../public/test_visual/Lamina6.jpg"
+const imgData7 = "../../public/test_visual/Lamina7.jpg"
+const imgData8 = "../../public/test_visual/Lamina8.jpg"
+const imgData9 = "../../public/test_visual/Lamina9.jpg"
+const imgData10 = "../../public/test_visual/Lamina10.jpg"
 var L2 = null;
 var L3 = null;
 var L4 = null;
@@ -21,8 +31,11 @@ function charge(){
 document.addEventListener("DOMContentLoaded",charge);
 
 function save(){
+    
     var valort= localStorage.getItem('validacion');
     var content= localStorage.getItem('contenido');
+    
+    let y = 20;
     if(valort>3){
         lamina++;
         switch(lamina){
@@ -68,7 +81,9 @@ function save(){
                 }, 50);
                 break;
         }
+        
     }
+
 }
 document.getElementById("send").addEventListener("click",save)
 
@@ -83,11 +98,38 @@ function showLamines(){
 document.getElementById("continue").addEventListener("click",showLamines)
 
 function download(){
+    const doc = new jsPDF();
     document.getElementById("lamdiv").classList.remove("flex")
     document.getElementById("lamdiv").classList.add("hidden")
     document.getElementById("back").classList.add("hidden")
 
     document.getElementById("finish").classList.remove("hidden")
     document.getElementById("finish").classList.add("flex")
+                doc.text(10, 20, "Test de Roschach");
+                doc.addImage(imgData, 'JPEG', 10, 40, 90, 80);
+                doc.text(10, 130, "Respuesta del estudiante:" + L1);
+                doc.addImage(imgData2, 'JPEG', 10, 150, 90, 80);
+                doc.text(10, 240, "Respuesta del estudiante:" + L2);
+                doc.addPage();
+                doc.addImage(imgData3, 'JPEG', 10, 40, 90, 80);
+                doc.text(10, 130, "Respuesta del estudiante:" + L3);
+                doc.addImage(imgData4, 'JPEG', 10, 150, 90, 80);
+                doc.text(10, 240, "Respuesta del estudiante:" + L4);
+                doc.addPage();
+                doc.addImage(imgData5, 'JPEG', 10, 40, 90, 80);
+                doc.text(10, 130, "Respuesta del estudiante:" + L5);
+                doc.addImage(imgData6, 'JPEG', 10, 150, 90, 80);
+                doc.text(10, 240, "Respuesta del estudiante:" + L6);
+                doc.addPage();
+                doc.addImage(imgData7, 'JPEG', 10, 40, 90, 80);
+                doc.text(10, 130, "Respuesta del estudiante:" + L7);
+                doc.addImage(imgData8, 'JPEG', 10, 150, 90, 80);
+                doc.text(10, 240, "Respuesta del estudiante:" + L8);
+                doc.addPage();
+                doc.addImage(imgData9, 'JPEG', 10, 40, 90, 80);
+                doc.text(10, 130, "Respuesta del estudiante:" + L9);
+                doc.addImage(imgData10, 'JPEG', 10, 150, 90, 80);
+                doc.text(10, 240, "Respuesta del estudiante:" + L10);
+                doc.save("Test de Roschach" + ".pdf");
     
 }
