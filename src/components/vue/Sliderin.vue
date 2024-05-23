@@ -4,7 +4,7 @@
         class="slider flex transition-transform duration-700 ease-in-out "
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
         >
-            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] border-2 border-blue-700">
+            <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] ">
                 <div class=" w-[1400px] border-[6px] border-white  ml-[250px] my-[100px] flex  items-center text-center  justify-center bg-[url('/public/sliderimg.jpg')]"  >
                     <div class="bg-[#3f3b3bad] p-12 flex justify-center items-center gap-[80px]">
                       <div class="julius-sans-one-regular text-white text-5xl mr-[40px] ">
@@ -17,12 +17,12 @@
                 </div>
             </div>
 
-            <div class="slide flex-shrink-0 w-full h-[744px] mt-[75px] mb-[150px] items-center flex border border-blue-700 ">
-                <div class="border border-black w-[1400px] ml-[250px] my-[100px] flex flex-col items-center text-center justify-center"  >
-                  <div class="julius-sans-one-regular  border pt-[40px] pb-[100px] border-blue-300 text-5xl">
+            <div class="slide flex-shrink-0 w-full h-[744px] mt-[75px] mb-[150px] items-center flex  ">
+                <div class=" w-[1400px] ml-[250px] my-[100px] flex flex-col items-center text-center justify-center"  >
+                  <div class="julius-sans-one-regular  border pt-[40px] pb-[100px]  text-5xl">
                       <p>Objetivo de desarrollo sostenible</p>
                   </div>
-                  <div class="flex items-center text-center gap-[30px] justify-center border border-black">
+                  <div class="flex items-center text-center gap-[30px] justify-center ">
                       <div class="julius-sans-one-regular text-5xl mr-[150px] hover:scale-110 duration-200 ease-in">
                           <img src="/public/objetivo.jpg" width="250px" alt="">
                       </div>
@@ -34,8 +34,15 @@
                 </div>
             </div>
 
-            <div class="slide flex-shrink-0 w-full h-full">
-                Prueba 3
+            <div class="slide flex-shrink-0 w-full h-[744px] mt-[75px] mb-[150px] items-center flex ">
+                <div class=" w-[1400px] ml-[250px] my-[100px] flex flex-col items-center text-center justify-center gap-[20px] archivo-narrow text-4xl leading-10"  >
+                  <p>
+                    En esta sección, nos gustaría compartir contigo cómo nuestro proyecto está haciendo una diferencia significativa en el panorama educativo. Estamos comprometidos con la promoción de la educación de calidad y la reducción de la deserción escolar, contribuyendo así al logro del Objetivo de Desarrollo Sostenible número 4: "Educación de Calidad"
+                  </p>
+                  <p>A través de nuestra plataforma, ofrecemos herramientas innovadoras y recursos diseñados para identificar los factores que pueden llevar a la deserción escolar y para ayudar a prevenirlos. Creemos firmemente que cada estudiante merece la oportunidad de recibir una educación de calidad y completar su formación académica con éxito.</p>
+                    
+                </div>
+                
             </div>
         </div>
         <button @click="prevSlide" class="absolute left-[50px] top-1/2 transform -translate-y-1/2 bg-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10 ease-in duration-200 hover:scale-110 opacity-70 hover:opacity-100 ">

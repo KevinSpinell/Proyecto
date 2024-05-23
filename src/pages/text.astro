@@ -2,6 +2,20 @@
 import Layout from "../layouts/Layout.astro"
 ---
 <style>
+    
+	@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kanit:wght@900&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+    .julius-sans-one-regular {
+		font-family: "Julius Sans One", sans-serif;
+		font-weight: 400;
+        font-style: normal;
+	}
+	.archivo-narrow {
+		font-family: "Archivo Narrow", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
     body{
         background: -webkit-linear-gradient(90deg, #f2e9d8,#eeab2f);          
         background: linear-gradient(90deg, #f2e9d8,#eeab2f);  
@@ -15,8 +29,8 @@ import Layout from "../layouts/Layout.astro"
                         Siguiente
                     </p>
                 </div>
-                <div class="flex justify-center items-center mt-7">
-                <p class="text-center p-4 max-w-md leading-7">
+                <div class="flex justify-center items-center mt-16">
+                <p class="text-center p-4 max-w-md leading-7 archivo-narrow">
                     ¡Hola!
                     <br>
                     Sé que a veces la vida de estudiante puede ser un desafío. Ya sea por el estrés de los exámenes, las preocupaciones sobre el futuro o simplemente los altibajos del día a día, todos enfrentamos momentos difíciles.
@@ -43,11 +57,11 @@ import Layout from "../layouts/Layout.astro"
                 <p>Seguimos por esta sección. Seguramente tu psicóloga te haya recomendado hacer este apartado. No te preocupes, sé que te va a gustar. Elige el tema que te sugirieron o uno de tu interés.</p>
                 </div>
 					<ul class="flex text-white gap-8  font-medium items-center">
-                        <a href="#" class="bg-white h-10 flex relative text-lg rounded-full w-[750px]  text-center px-4  text-black items-center group mb-4 mt-4">
-                            Elige la opción que más te guste o la que te recomendaron
+                        <a href="#" class="bg-white h-10 flex relative text-lg rounded-full w-[750px]    px-4 arhcivo-narrow  text-black items-center group mb-4 mt-4">
+                           <span class="text-center font-semibold">Elige la opción que más te guste o la que te recomendaron</span> 
                             <menu class=" group-hover:block bg-white text-black w-[750px] absolute  hidden -left-[1px] rounded-r-3xl rounded-l-3xl -top-[2px] rounded-xl">
-                                <div class="flex p-2 justify-center animate-slide-in-right">
-                                    <p class="font-semibold">Elige la opción que más te guste o la que te recomendaron</p>
+                                <div class="flex p-2  animate-slide-in-right">
+                                    <p class="font-semibold pl-[10px] ">Elige la opción que más te guste o la que te recomendaron</p>
                                 </div>
                                 <ul class="text-start pl-4 px-4 pb-4 font-normal">
                                     <li class="hover:border-[#804422] border-2 border-transparent p-1 rounded-2xl cursor-pointer" id="option1"></li>
@@ -83,10 +97,10 @@ import Layout from "../layouts/Layout.astro"
                 </div>
                 
                 <div class="flex flex-col justify-center items-center archivo-narrow">
-                    <div class="text-center p-4 mb-4">
+                    <div class="text-center p-4 mb-4 archivo-narrow">
                         <p>Escribe un texto de <span id="text"></span>, <b>se sincero contigo mismo</b>, no pasara nada con lo que digas.Te vamos a leer 😃<p>
                     </div>
-                    <div class="mt-4">
+                    <div class="mt-4 archivo-narrow">
                         <button type="submit" id="submitButton" class="bg-[#804422]  text-white py-2 px-3 rounded-3xl text-xl archivo-narrow hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-125 duration-150">Enviar</button>
                     </div>
                 </div>
