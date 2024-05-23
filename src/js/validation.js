@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
     export { Swal };
 import 'sweetalert2/src/sweetalert2.scss'
 let valido = sessionStorage.getItem("loggedUserEmail");
+let account = JSON.parse(valido);
 
 document.addEventListener("DOMContentLoaded", function() {
     let loginButton = document.querySelector("#iniciar");
@@ -39,7 +40,9 @@ let html = String.raw`
 `;
 document.addEventListener("DOMContentLoaded", function() {
     if(valido){
-        console.log(valido)
+        document.getElementById("recibido").classList.remove("hidden")
+        document.getElementById("bienvenido").innerText = "!Bienvenido/a " + account.name + "!"
+        document.getElementById("main").classList.add("hidden")
         document.getElementById("account").innerHTML = html;
         let button_login = document.getElementById("button_login")
         if(button_login){

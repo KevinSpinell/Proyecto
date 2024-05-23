@@ -18,8 +18,22 @@ const props = Astro.props
 			<path fill="currentColor" d="M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8l316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496" />
 		</svg>
 	</button>
+
 	<!-- Imagen principal -->
-	<main class="select-none">
+	<main id="recibido" class="select-none hidden">
+		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/salon.svg')] ">
+			<div class="w-full min-h-[775px] flex flex-col justify-center items-center">
+				<div class="julius-sans-one-regular text-white text-7xl" id="bienvenido">
+					Bienvenido name
+				</div>
+				<p class="archivo-narrow text-white px-24 text-3xl mt-16 text-center">
+					Estamos encantados de que estés aquí. En esta plataforma, te ofrecemos una herramienta única para ayudarte a entender y predecir la probabilidad de deserción estudiantil. A través de encuestas, tests de imágenes y el intercambio de ideas en nuestra caja de texto, te invitamos a explorar y comprender mejor los factores que pueden influir en este importante aspecto de la educación.
+					
+				</p>
+			</div>
+		</div>
+	</main>
+	<main id="main" class="select-none">
 		<div class="min-h-[775px] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center bg-[url('/public/salon.svg')] ">
 			<div class="flex flex-col justify-center items-center drop-shadow-2xl mb-16">
 				<h2 class="julius-sans-one-regular text-8xl text-white  font-black filter font" style="filter: drop-shadow(5px 5px 1px #000000);">Futuro en Marcha</h2>
