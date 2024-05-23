@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div class="inline-block mt-[20px]">
-                            <button id="send" class="bg-[#804422] text-white py-2 px-3 rounded-3xl text-base ease-in duration-200 hover:scale-110 hover:bg-white hover:text-[#804422] border hover:border-[#804422] " @click="countplus" >Enviar respuesta</button>
+                            <button id="send" class="bg-[#804422] archivo-narrow text-white py-2 px-3 rounded-3xl text-base ease-in duration-200 hover:scale-110 hover:bg-white hover:text-[#804422] border hover:border-[#804422] " @click="countplus" >Enviar respuesta</button>
                         </div>
                     </div>
 
