@@ -5,26 +5,32 @@
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
         >
             <div class="slide flex-shrink-0 w-full h-full mt-[75px] mb-[150px] border-2 border-blue-700">
-                <div class=" w-[1400px] border-[6px] border-white  ml-[200px] my-[100px] flex  items-center text-center  justify-center bg-[url('/public/deser.jpg')]"  >
-                    <div class="bg-[#ffffffa9] p-12 flex justify-center items-center gap-[80px]">
-                      <div class="julius-sans-one-regular text-[#804422] text-5xl mr-[40px]">
+                <div class=" w-[1400px] border-[6px] border-white  ml-[250px] my-[100px] flex  items-center text-center  justify-center bg-[url('/public/sliderimg.jpg')]"  >
+                    <div class="bg-[#3f3b3bad] p-12 flex justify-center items-center gap-[80px]">
+                      <div class="julius-sans-one-regular text-white text-5xl mr-[40px] ">
                         Deserción en estudiantes
                       </div>
                       <div class="archivo-narrow text-2xl h-auto w-1/3">
-                          <p class="leading-9 text-[#804422]">La deserción escolar es el abandono prematuro del sistema educativo por parte de estudiantes antes de completar la etapa de educación obligatoria o de alcanzar el nivel educativo que estaban cursando. Este fenómeno puede ocurrir en cualquier nivel de la educación, desde la primaria hasta la educación secundaria o superior. La deserción escolar es un problema significativo que puede tener consecuencias a largo plazo tanto para los individuos como para la sociedad en general.</p>
+                          <p class="leading-9 text-slate-200 ">La deserción escolar es el abandono prematuro del sistema educativo por parte de estudiantes antes de completar la etapa de educación obligatoria o de alcanzar el nivel educativo que estaban cursando. Este fenómeno puede ocurrir en cualquier nivel de la educación, desde la primaria hasta la educación secundaria o superior. La deserción escolar es un problema significativo que puede tener consecuencias a largo plazo tanto para los individuos como para la sociedad en general.</p>
                       </div>
                     </div>
                 </div>
             </div>
 
             <div class="slide flex-shrink-0 w-full h-[744px] mt-[75px] mb-[150px] items-center flex border border-blue-700 ">
-                <div class="border border-black w-[1400px] ml-[200px] my-[100px] flex items-center text-center gap-[80px] justify-center"  >
-                    <div class="julius-sans-one-regular text-5xl mr-[150px]">
-                        <img src="/public/objetivo.jpg" width="250px" alt="">
-                    </div>
-                    <div class="archivo-narrow text-2xl h-auto">
-                        <img src="/public/objetivo2.png" width="700px" alt="">
-                    </div>
+                <div class="border border-black w-[1400px] ml-[250px] my-[100px] flex flex-col items-center text-center justify-center"  >
+                  <div class="julius-sans-one-regular  border pt-[40px] pb-[100px] border-blue-300 text-5xl">
+                      <p>Objetivo de desarrollo sostenible</p>
+                  </div>
+                  <div class="flex items-center text-center gap-[30px] justify-center border border-black">
+                      <div class="julius-sans-one-regular text-5xl mr-[150px] hover:scale-110 duration-200 ease-in">
+                          <img src="/public/objetivo.jpg" width="250px" alt="">
+                      </div>
+                      <div class="archivo-narrow text-2xl h-auto hover:scale-110 duration-200 ease-in">
+                          <img src="/public/objetivo2.png" width="700px" alt="">
+                      </div>
+                  </div>
+                    
                 </div>
             </div>
 
