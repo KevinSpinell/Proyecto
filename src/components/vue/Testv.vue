@@ -21,6 +21,12 @@
         }
         else {
             document.getElementById("see").placeholder = "Escribe algo más largo"
+            document.getElementById("box").classList.add("bg-red-200")
+            document.getElementById("see").classList.add("bg-red-200")
+            setTimeout(function(){
+                document.getElementById("box").classList.remove("bg-red-200")
+                document.getElementById("see").classList.remove("bg-red-200")
+            },1500)
         }
     }
 
@@ -99,8 +105,8 @@
                         </div>
                         <div class="h-4"></div>
                         <div class="flex justify-around w-3/4 archivo-narrow">
-                            <div class="rounded-2xl border-2 border-[#804422] w-3/5 h-[40px] flex justify-center py-1 px-2">
-                                <input id="see" type="text" placeholder="Escribe lo que ves" maxlength="32" autocomplete="off" class=" w-full outline-none" >
+                            <div id="box" class="rounded-2xl border-2 border-[#804422] w-3/5 h-[40px] flex justify-center py-1 px-2 duration-100 ease-in">
+                                <input id="see" type="text" placeholder="Escribe lo que ves" maxlength="32" autocomplete="off" class=" w-full outline-none duration-100 ease-in" >
                             </div>
                         </div>
                         <div class="inline-block mt-[20px]">
