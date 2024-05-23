@@ -105,31 +105,35 @@ function download(){
 
     document.getElementById("finish").classList.remove("hidden")
     document.getElementById("finish").classList.add("flex")
-                doc.text(10, 20, "Test de Roschach");
-                doc.addImage(imgData, 'JPEG', 10, 40, 90, 80);
-                doc.text(10, 130, "Respuesta del estudiante:" + L1);
-                doc.addImage(imgData2, 'JPEG', 10, 150, 90, 80);
-                doc.text(10, 240, "Respuesta del estudiante:" + L2);
-                doc.addPage();
-                doc.addImage(imgData3, 'JPEG', 10, 40, 90, 80);
-                doc.text(10, 130, "Respuesta del estudiante:" + L3);
-                doc.addImage(imgData4, 'JPEG', 10, 150, 90, 80);
-                doc.text(10, 240, "Respuesta del estudiante:" + L4);
-                doc.addPage();
-                doc.addImage(imgData5, 'JPEG', 10, 40, 90, 80);
-                doc.text(10, 130, "Respuesta del estudiante:" + L5);
-                doc.addImage(imgData6, 'JPEG', 10, 150, 90, 80);
-                doc.text(10, 240, "Respuesta del estudiante:" + L6);
-                doc.addPage();
-                doc.addImage(imgData7, 'JPEG', 10, 40, 90, 80);
-                doc.text(10, 130, "Respuesta del estudiante:" + L7);
-                doc.addImage(imgData8, 'JPEG', 10, 150, 90, 80);
-                doc.text(10, 240, "Respuesta del estudiante:" + L8);
-                doc.addPage();
-                doc.addImage(imgData9, 'JPEG', 10, 40, 90, 80);
-                doc.text(10, 130, "Respuesta del estudiante:" + L9);
-                doc.addImage(imgData10, 'JPEG', 10, 150, 90, 80);
-                doc.text(10, 240, "Respuesta del estudiante:" + L10);
-                doc.save("Test de Roschach" + ".pdf");
+
+    setTimeout(function() {
+        doc.text(10, 20, "Test de Roschach");
+        doc.addImage(imgData, 'JPEG', 10, 40, 90, 80);
+        doc.text(10, 130, "Respuesta del estudiante:" + L1);
+        doc.addImage(imgData2, 'JPEG', 10, 150, 90, 80);
+        doc.text(10, 240, "Respuesta del estudiante:" + L2);
+        doc.addPage();
+        doc.addImage(imgData3, 'JPEG', 10, 40, 90, 80);
+        doc.text(10, 130, "Respuesta del estudiante:" + L3);
+        doc.addImage(imgData4, 'JPEG', 10, 150, 90, 80);
+        doc.text(10, 240, "Respuesta del estudiante:" + L4);
+        doc.addPage();
+        doc.addImage(imgData5, 'JPEG', 10, 40, 90, 80);
+        doc.text(10, 130, "Respuesta del estudiante:" + L5);
+        doc.addImage(imgData6, 'JPEG', 10, 150, 90, 80);
+        doc.text(10, 240, "Respuesta del estudiante:" + L6);
+        doc.addPage();
+        doc.addImage(imgData7, 'JPEG', 10, 40, 90, 80);
+        doc.text(10, 130, "Respuesta del estudiante:" + L7);
+        doc.addImage(imgData8, 'JPEG', 10, 150, 90, 80);
+        doc.text(10, 240, "Respuesta del estudiante:" + L8);
+        doc.addPage();
+        doc.addImage(imgData9, 'JPEG', 10, 40, 90, 80);
+        doc.text(10, 130, "Respuesta del estudiante:" + L9);
+        doc.addImage(imgData10, 'JPEG', 10, 150, 90, 80);
+        doc.text(10, 240, "Respuesta del estudiante:" + L10);
+        doc.save("Test de Roschach" + ".pdf");        
+    }, 3000);
+
     
 }
