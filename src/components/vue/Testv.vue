@@ -32,11 +32,24 @@
     ]
 
     const gradientesArray = [
-    "bg-[#F2E9D8]", "bg-[#FDFFD4]", "bg-[#FCFAC9]", "bg-[#FBF4BE]", "bg-[#FAEFB3]",
-    "bg-[#F9EAA8]", "bg-[#F8E49D]", "bg-[#F7DE92]", "bg-[#F6D887]", "bg-[#F5D27C]",
-    "bg-[#F4CD71]", "bg-[#F3C766]", "bg-[#F2C25B]", "bg-[#F1BD50]", "bg-[#F0B745]",
-    "bg-[#EFB13A]", "bg-[#EEAB2F]"
-    ];
+  "bg-[#F2E9D8]",
+  "bg-[#F1E5CD]",
+  "bg-[#F0E1C2]",
+  "bg-[#EFDDB7]",
+  "bg-[#EED9AC]",
+  "bg-[#EDD5A1]",
+  "bg-[#ECD196]",
+  "bg-[#EBCC8B]",
+  "bg-[#EAC880]",
+  "bg-[#E9C475]",
+  "bg-[#E8C06A]",
+  "bg-[#E7BC5F]",
+  "bg-[#E6B754]",
+  "bg-[#E5B349]",
+  "bg-[#E4AF3E]",
+  "bg-[#E3AA33]",
+  "bg-[#EEAB2F]"
+]
 
 </script>
 

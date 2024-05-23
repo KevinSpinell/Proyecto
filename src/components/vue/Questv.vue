@@ -34,18 +34,24 @@
 
     ]
     const gradientesArray = [
-    "bg-[#F2E9D8]", "bg-[#FDFFD4]", "bg-[#FCFAC9]", "bg-[#FBF4BE]", "bg-[#FAEFB3]",
-    "bg-[#F9EAA8]", "bg-[#F8E49D]", "bg-[#F7DE92]", "bg-[#F6D887]", "bg-[#F5D27C]",
-    "bg-[#F4CD71]", "bg-[#F3C766]", "bg-[#F2C25B]", "bg-[#F1BD50]", "bg-[#F0B745]",
-    "bg-[#EFB13A]", "bg-[#EEAB2F]"
-    ];
-
-    // const stickers = [
-    //     "hidden","bg-[url('/public/emotes/Velkoz.png')] left-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Lux.png')] right-[8%] bottom-[20%]","hidden",
-    //     "bg-[url('/public/emotes/Braum.webp')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Teemo.png')] left-[8%] bottom-[20%]","hidden",
-    //     "bg-[url('/public/emotes/Blitz.webp')] right-[8%] bottom-[20%]","hidden","bg-[url('/public/emotes/Ziggs.png')] left-[8%] top-[20%]","hidden",
-    //     "bg-[url('/public/emotes/MissFortune.png')] right-[8%] top-[20%]","hidden","bg-[url('/public/emotes/Pengu2.webp')] left-[8%] top-[20%]","hidden"
-    // ]
+  "bg-[#F2E9D8]",
+  "bg-[#F1E5CD]",
+  "bg-[#F0E1C2]",
+  "bg-[#EFDDB7]",
+  "bg-[#EED9AC]",
+  "bg-[#EDD5A1]",
+  "bg-[#ECD196]",
+  "bg-[#EBCC8B]",
+  "bg-[#EAC880]",
+  "bg-[#E9C475]",
+  "bg-[#E8C06A]",
+  "bg-[#E7BC5F]",
+  "bg-[#E6B754]",
+  "bg-[#E5B349]",
+  "bg-[#E4AF3E]",
+  "bg-[#E3AA33]",
+  "bg-[#EEAB2F]"
+]
 
 
    
@@ -77,7 +83,7 @@
     
 </style>
 <template>
-        <main class="h-lvh transition-all duration-700" :class="gradientesArray[count]">
+        <main class="h-lvh transition-all duration-200" :class="gradientesArray[count]">
             <div class="flex justify-center items-center pt-40 select-none">
                 <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
                     <div class="flex flex-col items-center justify-center h-full">
