@@ -35,7 +35,7 @@
             </div>
 
             <div class="slide flex-shrink-0 w-full h-full">
-                Slide 3
+                Prueba 3
             </div>
         </div>
         <button @click="prevSlide" class="absolute left-[50px] top-1/2 transform -translate-y-1/2 bg-white font-bold py-4 px-4 rounded-full text-xl shadow-xl z-10 ease-in duration-200 hover:scale-110 opacity-70 hover:opacity-100 ">
