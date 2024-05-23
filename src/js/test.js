@@ -68,18 +68,17 @@ function save(){
             case 8: 
                 L8 = content;
                 break;
-            default: 
+            case 9: 
                 L9 = content;
                 console.log("Aquí tienes la respuesta 9:");
                 console.log(L9);
-                setTimeout(function() {
-                    var content = localStorage.getItem('contenido');
-                    L10 = content;
+                break;
+            default:
+                L10 = content;
                     console.log("Aquí tienes la respuesta 10:");
                     console.log(L10);
                     download();
-                }, 50);
-                break;
+                    break;
         }
         
     }
