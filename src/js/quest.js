@@ -44,7 +44,7 @@
 
 
     function charge(){
-        document.getElementById("questionid").innerText="¿Qué tan comodo es el ambiente de tu colegio para ti?";
+        document.getElementById("questionid").innerText="¿Qué tan cómodo es el ambiente de tu colegio para ti?";
         document.getElementById("ans1").innerText="1";
         document.getElementById("ans2").innerText="2";
         document.getElementById("ans3").innerText="3";

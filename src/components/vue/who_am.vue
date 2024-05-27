@@ -52,11 +52,11 @@
     <div class="bg-[#F2E9D8] text-center mx-auto mt-10  py-8 px-10">
         <div class="flex justify-center flex-col">
             <h1 class="text-center  text-4xl text-[#804422] julius-sans-one-regular">
-                ¿Quien Quiero Ser?
+                ¿Quién Quiero Ser?
             </h1>
             <p class="archivo-narrow text-[#804422] text-center text-xl mt-12 w-1/2 m-auto">
-                En esta sección tendras que escribir lo que quieres ser a futuro, luego escribiras una serie de pasos de como quieres llegar a serlo 
-                teniendo en cuenta el paso anterior, esto quiere decir que el paso que escribas va a ser como llegar al paso escrito anteriormente.
+                En esta sección tendrás que escribir lo que quieres ser a futuro, luego escribirás una serie de pasos de cómo quieres llegar a serlo, 
+                teniendo en cuenta el paso anterior, esto quiere decir que el paso que escribas va a ser cómo llegar al paso escrito anteriormente.
             </p>
         </div>
         <div id="caja" class="mt-12 mb-16 flex justify-center">

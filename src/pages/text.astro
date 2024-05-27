@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro"
     } 
 </style>
 <Layout tittle="Caja de texto">
-        <div class="flex justify-center items-center pt-40 archivo-narrow" id="select1">
+        <div class="flex justify-center items-center pt-40 archivo-narrow select-none" id="select1">
             <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-[#804422] shadow-xl archivo-narrow">
                 <div id="next" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer select-none hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150">
                     <p>
@@ -48,7 +48,7 @@ import Layout from "../layouts/Layout.astro"
             </div>
         </div>
         
-        <div class="hidden" id="select">
+        <div class="hidden select-none" id="select">
             <div class="h-[25vh]" ></div>
             
             <div class="flex justify-center items-center archivo-narrow">
@@ -83,7 +83,7 @@ import Layout from "../layouts/Layout.astro"
             </div>
         </div>
     
-    <div class="flex justify-center items-center pt-40 hidden archivo-narrow" id="Box">
+    <div class="flex justify-center items-center pt-40 hidden archivo-narrow select-none" id="Box">
         <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-[#804422] shadow-xl">
             <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer select-none hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150" onclick="window.location.href = 'index.html'">
                 <p>
@@ -101,7 +101,7 @@ import Layout from "../layouts/Layout.astro"
                         <p>Escribe un texto de <span id="text"></span>, <b>se sincero contigo mismo</b>, no pasara nada con lo que digas.Te vamos a leer 😃<p>
                     </div>
                     <div class="mt-4 archivo-narrow">
-                        <button type="submit" id="submitButton" class="bg-[#804422]  text-white py-2 px-3 rounded-3xl text-xl archivo-narrow hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-125 duration-150">Enviar</button>
+                        <button type="submit" id="submitButton" class="bg-[#804422] archivo-narrow text-white py-2 px-3 rounded-3xl text-xl archivo-narrow hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-125 duration-150">Enviar</button>
                     </div>
                 </div>
                 

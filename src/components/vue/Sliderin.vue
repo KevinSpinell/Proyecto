@@ -19,7 +19,7 @@
 
             <div class="slide flex-shrink-0 w-full h-[744px] mt-[75px] mb-[150px] items-center flex  ">
                 <div class=" w-[1400px] ml-[250px] my-[100px] flex flex-col items-center text-center justify-center"  >
-                  <div class="julius-sans-one-regular  border pt-[40px] pb-[100px]  text-5xl">
+                  <div class="julius-sans-one-regular pt-[40px] pb-[100px]  text-5xl">
                       <p>Objetivo de desarrollo sostenible</p>
                   </div>
                   <div class="flex items-center text-center gap-[30px] justify-center ">
