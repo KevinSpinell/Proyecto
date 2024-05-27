@@ -10,13 +10,13 @@
             tasks.value.push(inputTasks.value)
             inputTasks.value = ''
             if(step>0){
-                document.getElementById("meta").placeholder ="Escribe el paso "+ step
+                document.getElementById("meta").placeholder ="Escribe el siguente paso"
             }
             step ++;
         }else if(step<=12){
             console.log("hila")
             document.getElementById("meta").value = ""
-            document.getElementById("meta").placeholder ="Escribe el paso "+ step + " (Debe ser mayor a 5 carácteres)"
+            document.getElementById("meta").placeholder ="(Debe ser mayor a 5 carácteres)"
         }else{
             document.getElementById("agg").classList.add("hidden");
             document.getElementById("meta").classList.add("hidden");
@@ -35,12 +35,16 @@
         deleted();
     }
     function enviar(){
-        document.getElementById("agg").classList.add("hidden");
-        document.getElementById("meta").classList.add("hidden");
-        document.getElementById("form").classList.add("hidden");
+        if(step>2){
+            document.getElementById("agg").classList.add("hidden");
+            document.getElementById("meta").classList.add("hidden");
+            document.getElementById("form").classList.add("hidden");
 
-        document.getElementById("text_dow").classList.remove("hidden");
-        download();
+            document.getElementById("text_dow").classList.remove("hidden");
+            download();
+        }else{
+            document.getElementById("meta").placeholder ="¡Antes de enviar deben haber pasos!"
+        }
     }
     
 </script>
@@ -58,7 +62,7 @@
         <div id="caja" class="mt-12 mb-16 flex justify-center">
             <span id="text_dow" class="text-[#804422] hidden text-xl font-semibold archivo-narrow">Es momento de que coloques tu hoja de ruta en un lugar donde la puedas visualizar</span>
             <div class="flex justify-center">
-                <input id="meta" type="text" placeholder="Escribe tu meta!" class=" mr-6 border-2 rounded-lg p-2 border-[#804422] outline-none" v-model="inputTasks">
+                <input id="meta" type="text" placeholder="¡Escribe tu meta!" class=" mr-6 border-2 rounded-lg p-2 border-[#804422] outline-none w-96" v-model="inputTasks">
                 <button id="agg" class="a bg-white mr-4 text-[#804422] pl-3 pr-3 pt-0 h-14 rounded-2xl border-2 border-[#804422] ease-in duration-300 hover:scale-110  hover:bg-[#804422] hover:text-white hover:border-[#804422] archivo-narrow" @click="addTask()" >Agregar</button>
                 <button id="form" class=" bg-white text-[#804422] w-[100px] pl-3 pr-3 pt-0 h-14 rounded-2xl border-2 border-[#804422] ease-in duration-300 hover:scale-110  hover:bg-[#804422] hover:text-white hover:border-[#804422] archivo-narrow" @click="enviar()" >Enviar</button>
             </div>
