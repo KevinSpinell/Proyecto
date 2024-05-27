@@ -41,7 +41,7 @@ let html = String.raw`
 document.addEventListener("DOMContentLoaded", function() {
     if(valido){
         document.getElementById("recibido").classList.remove("hidden")
-        document.getElementById("bienvenido").innerText = "!Bienvenido/a " + account.name + "!"
+        document.getElementById("bienvenido").innerText = "¡Bienvenido/a " + account.name + "!"
         document.getElementById("main").classList.add("hidden")
         document.getElementById("account").innerHTML = html;
         let button_login = document.getElementById("button_login")

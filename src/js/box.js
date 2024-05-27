@@ -315,11 +315,11 @@ function change() {
 }
 
 
-document.getElementById("option1").innerText="Cuentanos como es tu vida con tus familiares";
-document.getElementById("option2").innerText="Como te llevas con tus compañeros y si te gusta tu ambiente escolar";
-document.getElementById("option3").innerText="Que habitos de estudio practicas";
-document.getElementById("option4").innerText="Cuentanos acerca de tus fortalezas";
-document.getElementById("option5").innerText="Como es tu vida social en general";
+document.getElementById("option1").innerText="Cuéntanos cómo es tu vida con tus familiares";
+document.getElementById("option2").innerText="Cómo te llevas con tus compañeros y si te gusta tu ambiente escolar";
+document.getElementById("option3").innerText="Qué hábitos de estudio practicas";
+document.getElementById("option4").innerText="Cuéntanos acerca de tus fortalezas";
+document.getElementById("option5").innerText="Cómo es tu vida social en general";
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -331,7 +331,7 @@ function option1() {
     let selectElement1 = document.getElementById('Box');
     selectElement1.classList.remove('hidden');
     selectElement.classList.add('hidden');
-    let text = document.getElementById('text').innerText="como es tu vida con tus familiares"
+    let text = document.getElementById('text').innerText="Cómo es tu vida con tus familiares"
     let textarea = document.getElementById("text1");
     textarea.focus();
 
@@ -347,7 +347,7 @@ function option2() {
     let selectElement1 = document.getElementById('Box');
     selectElement1.classList.remove('hidden');
     selectElement.classList.add('hidden');
-    let text = document.getElementById('text').innerText="como te llevas con tus compañeros y si te gusta tu ambiente escolar"
+    let text = document.getElementById('text').innerText="Cómo te llevas con tus compañeros y si te gusta tu ambiente escolar"
     let textarea = document.getElementById("text1");
     textarea.focus();
     
@@ -362,7 +362,7 @@ function option3() {
     let selectElement1 = document.getElementById('Box');
     selectElement1.classList.remove('hidden');
     selectElement.classList.add('hidden');
-    let text = document.getElementById('text').innerText="los habitos de estudio que practicas"
+    let text = document.getElementById('text').innerText="Los hábitos de estudio que practicas"
     let textarea = document.getElementById("text1");
     textarea.focus();
     
@@ -377,7 +377,7 @@ function option4() {
     let selectElement1 = document.getElementById('Box');
     selectElement1.classList.remove('hidden');
     selectElement.classList.add('hidden');
-    let text = document.getElementById('text').innerText="como es tu vida social en general"
+    let text = document.getElementById('text').innerText="Cómo es tu vida social en general"
     let textarea = document.getElementById("text1");
     textarea.focus();
 }
@@ -393,7 +393,7 @@ function option5(palabrasVidaSocialNegativas) {
     let selectElement1 = document.getElementById('Box');
     selectElement1.classList.remove('hidden');
     selectElement.classList.add('hidden');
-    let text = document.getElementById('text').innerText="como es tu vida con tus familiares"
+    let text = document.getElementById('text').innerText="Cómo es tu vida con tus familiares"
     let textarea = document.getElementById("text1");
     textarea.focus();
     evaluartext(palabrasVidaSocialNegativas);
@@ -429,8 +429,8 @@ function evaluartext(event) {
     doc.text(10, 20, lines);
     doc.addPage();
     let highlightedWords = detect.filter(detectWord => words.includes(detectWord.replace(/[!"'(),.:;?.]/ , "")));
-    doc.text("Palabras Alarmantes", c, b);
-    doc.text("Las siguientes palabras Son extraidas del texto:", c, b+10);
+    doc.text("Palabras Alarmantes ", c, b);
+    doc.text("Las siguientes palabras Son extraidas del texto: ", c, b+10);
     // Imprimir el texto con las palabras clave resaltadas en rojo
     highlightedWords.forEach(word => {
         doc.setTextColor(255, 0, 0); // Establecer el color de texto a rojo
@@ -442,7 +442,7 @@ function evaluartext(event) {
     console.log(name);
 
     // Guardar el documento PDF
-    doc.save("archivo" + ".pdf");
+    doc.save("Test" + ".pdf");
 
     localStorage.setItem("Texto", a);
 
