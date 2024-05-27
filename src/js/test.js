@@ -101,7 +101,7 @@ function download(){
         doc.addImage(imgData, 'JPEG', 10, 40, 90, 80);
         doc.text(10, 130, "Respuesta del estudiante: " + L1);
         doc.addImage(imgData2, 'JPEG', 10, 150, 90, 80);
-        doc.text(10, 240, "Respuesta del estudiante:" + L2);
+        doc.text(10, 240, "Respuesta del estudiante: " + L2);
         doc.addPage();
         doc.addImage(imgData3, 'JPEG', 10, 40, 90, 80);
         doc.text(10, 130, "Respuesta del estudiante: " + L3);
@@ -124,6 +124,4 @@ function download(){
         doc.text(10, 240, "Respuesta del estudiante: " + L10);
         doc.save("Test de Roschach" + ".pdf");        
     }, 3000);
-
-    
 }
