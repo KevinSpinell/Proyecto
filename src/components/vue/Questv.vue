@@ -87,9 +87,14 @@
             <div class="flex justify-center items-center pt-40 select-none">
                 <div class="bg-white w-[1000px] h-[600px] rounded-3xl shadow-2xl static">
                     <div class="flex flex-col items-center justify-center h-full">
-                        <div id="back" class="absolute right-1/4 top-[20%] px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150" onclick="window.location.href = 'index.html'">
+                        <div id="back" class="absolute right-1/4 top-[20%] archivo-narrow px-3 py-2 bg-[#804422] rounded-2xl text-white hover:cursor-pointer hover:bg-white hover:text-[#804422] border hover:border-[#804422] hover:scale-110 duration-150" onclick="window.location.href = 'index.html'">
                             <p>
                                 Regresar
+                            </p>
+                        </div>
+                        <div id="counter" class="absolute right-[50%] top-[21%] text-lg archivo-narrow rounded-full py-2 px-2 border-[#804422] border text-[#804422]" >
+                            <p>
+                                {{ count }}/16
                             </p>
                         </div>
                         <!-- <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base ">
@@ -97,8 +102,8 @@
                                 5: Mucho | 4: Un poco | 3: Más o menos | 2: Poco | 1: Muy Poco
                             </p>
                         </div> -->
-                        <div class="w-2/5 h-[150px]  text-center flex items-center archivo-narrow text-3xl justify-center" id="questionid"></div>
-                        <div class="h-12  "></div>
+                        <div class="w-3/5 h-[150px]  text-center flex items-center archivo-narrow text-3xl justify-center" id="questionid"></div>
+                        <div class="h-[80px]"></div>
                         <div class="flex justify-around w-3/4 archivo-narrow" id="anscont">
                             <div class="flex flex-col items-center gap-2">
                                 <div class="answer-div hover:scale-125 hover:bg-[#804422] duration-150 ease-in hover:text-white font-semibold" id="ans1" @click="countplus" >1</div>

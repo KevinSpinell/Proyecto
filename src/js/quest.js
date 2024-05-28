@@ -179,6 +179,7 @@
     function showButton(){
         document.getElementById("questionid").style.display = "none";
         document.getElementById("anscont").classList.add("hidden")
+        document.getElementById("counter").classList.add("hidden")
         document.getElementById("sendQuest").style.display = "flex";
     }
     // var good=0;
@@ -193,6 +194,13 @@
             document.getElementById("message").innerText = "Felicidades por tu excelente desempeño académico. Tu dedicación y esfuerzo están dando frutos, y eso es algo para estar realmente orgulloso. Sigue aprovechando tu impulso y mantén el enfoque en tus metas. Recuerda que el éxito no es solo un destino, sino un viaje continuo de crecimiento y aprendizaje. Mantén tu curiosidad y tu pasión por el conocimiento, y sigue buscando nuevas formas de desafiarte a ti mismo. Tu determinación y compromiso te llevarán aún más lejos en tu camino hacia el éxito. ¡Sigue brillando y alcanzando nuevas alturas!"
             blue++;
             localStorage.setItem('blue', blue);
+        }
+        //Mensaje cuando no hay claridad en sus respuestas
+        else if(far==near || gone==good || near==good || far==gone ){
+            document.getElementById("titleMessage").innerText = "Tu puedes, nunca dudes de ello"
+            document.getElementById("message").innerText = "Es natural tener altibajos en el desempeño académico, y es importante reconocer que estar en una etapa 'regular' es solo una parte del proceso de aprendizaje. Utiliza este momento como una oportunidad para reflexionar sobre tus fortalezas y áreas de mejora. Identifica qué aspectos de tu enfoque de estudio podrían ajustarse para mejorar tu rendimiento. Recuerda que cada obstáculo es una oportunidad para crecer y aprender. Mantén una actitud positiva y persevera en tus esfuerzos. Con paciencia y determinación, puedes superar los desafíos y alcanzar tus metas académicas."
+            yellow++;
+            localStorage.setItem('yellow', yellow);
         }
         //Mensaje cuando hay poco riesgo
         else if((far>good && far>near && far>gone) || (good==far && good!=0)){
@@ -215,13 +223,7 @@
             red++;
             localStorage.setItem('red', red);
         }
-        //Mensaje cuando no hay claridad en sus respuestas
-        else if(far==near || gone==good || near==good || far==gone ){
-            document.getElementById("titleMessage").innerText = "Tu puedes, nunca dudes de ello"
-            document.getElementById("message").innerText = "Es natural tener altibajos en el desempeño académico, y es importante reconocer que estar en una etapa 'regular' es solo una parte del proceso de aprendizaje. Utiliza este momento como una oportunidad para reflexionar sobre tus fortalezas y áreas de mejora. Identifica qué aspectos de tu enfoque de estudio podrían ajustarse para mejorar tu rendimiento. Recuerda que cada obstáculo es una oportunidad para crecer y aprender. Mantén una actitud positiva y persevera en tus esfuerzos. Con paciencia y determinación, puedes superar los desafíos y alcanzar tus metas académicas."
-            yellow++;
-            localStorage.setItem('yellow', yellow);
-        }
+        
         document.getElementById("mesDiv").style.display = "flex";
     }
     document.getElementById("send").addEventListener("click",showMessage)
