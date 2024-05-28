@@ -8,17 +8,21 @@
         let content = document.getElementById("see").value
         localStorage.setItem('validacion', valor);
         localStorage.setItem('contenido',content);
-
-        if (valor>3 && count.value<9) {
+        console.log("Antes del if, el valor es: "+valor);
+        console.log(" ");
+        if (valor>3 && count.value<10) {
             count.value++;
             document.getElementById("see").value = ""
             document.getElementById("see").placeholder = "Escribe lo que ves"
             document.getElementById("see").focus();
-            console.log("if:");
+            console.log("Dentro del if:");
             console.log("count: " + count.value);
             console.log(valor);
+            console.log(" ");
         }
         else {
+            console.log("Fuera del if");
+            console.log(" ");
             document.getElementById("see").placeholder = "Escribe algo más largo"
             document.getElementById("see").value = ""
             document.getElementById("see").focus();
