@@ -31,52 +31,64 @@ function charge(){
 document.addEventListener("DOMContentLoaded",charge);
 
 function save(){
+    setTimeout(function() {
+        var valort= localStorage.getItem('validacion');
+        console.log("valort en el script: "+valort);
     
-    var valort= localStorage.getItem('validacion');
-    console.log("valort: "+valort);
-
-    var content= localStorage.getItem('contenido');
-    
-    if(valort>3){
-        lamina++;
-        switch(lamina){
-            case 1: 
-                L1 = content;
-                break;
-            case 2: 
-                L2 = content;
-                break;
-            case 3: 
-                L3 = content;
-                break;
-            case 4: 
-                L4 = content;
-                break;
-            case 5: 
-                L5 = content;
-                break;
-            case 6: 
-                L6 = content;
-                break;
-            case 7: 
-                L7 = content;
-                break;
-            case 8: 
-                L8 = content;
-                break;
-            default: 
-                L9 = content;
-                setTimeout(function() {
+        var content= localStorage.getItem('contenido');
+        
+        if(valort>3){
+            console.log("Entro al if del script:");
+            lamina++;
+            switch(lamina){
+                case 1: 
+                    L1 = content;
+                    console.log("La lamina anterior fue la: "+lamina+ " (Debería ser la 1)");
+                    console.log("La respuesta es: "+L1);
+                    break;
+                case 2: 
+                    L2 = content;
+                    console.log("La lamina anterior fue la: "+lamina);
+                    console.log("La respuesta es: "+L2);
+                    break;
+                case 3: 
+                    L3 = content;
+                    break;
+                case 4: 
+                    L4 = content;
+                    break;
+                case 5: 
+                    L5 = content;
+                    break;
+                case 6: 
+                    L6 = content;
+                    break;
+                case 7: 
+                    L7 = content;
+                    break;
+                case 8: 
+                    L8 = content;
+                    console.log("La lamina anterior fue la: "+lamina);
+                    console.log("La respuesta es: "+L8);
+                    break;
+                case 9: 
+                    L9 = content;
+                    console.log("La lamina anterior fue la: "+lamina);
+                    console.log("La respuesta es: "+L9);
+                    break;
+                default:
                     var content= localStorage.getItem('contenido');
                     L10 = content;
-                    console.log("lamina: "+lamina);
-                    console.log("Entro el caso 10");
+                    console.log("La lamina anterior fue la: "+lamina);
+                    console.log("La respuesta es: "+L10);
                     download();
-                }, 50)
-                break;
-        }
-        
-    }
+                    break;
+            }
+            
+        }         
+    }, 100);
+    
+
 
 }
 document.getElementById("send").addEventListener("click",save)
