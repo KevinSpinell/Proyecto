@@ -3,8 +3,6 @@
 
     let count = ref(0);
 
-
-
     const countplus = () => {
         let valor = document.getElementById("see").value.length;
         let content = document.getElementById("see").value
@@ -15,12 +13,15 @@
             count.value++;
             document.getElementById("see").value = ""
             document.getElementById("see").placeholder = "Escribe lo que ves"
+            document.getElementById("see").focus();
             console.log("if:");
             console.log("count: " + count.value);
             console.log(valor);
         }
         else {
             document.getElementById("see").placeholder = "Escribe algo más largo"
+            document.getElementById("see").value = ""
+            document.getElementById("see").focus();
             document.getElementById("box").classList.add("bg-red-200")
             document.getElementById("see").classList.add("bg-red-200")
             setTimeout(function(){

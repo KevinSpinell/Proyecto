@@ -33,9 +33,10 @@ document.addEventListener("DOMContentLoaded",charge);
 function save(){
     
     var valort= localStorage.getItem('validacion');
+    console.log("valort: "+valort);
+
     var content= localStorage.getItem('contenido');
     
-    let y = 20;
     if(valort>3){
         lamina++;
         switch(lamina){
@@ -63,13 +64,16 @@ function save(){
             case 8: 
                 L8 = content;
                 break;
-            case 9: 
+            default: 
                 L9 = content;
-                break;
-            default:
-                L10 = content;
+                setTimeout(function() {
+                    var content= localStorage.getItem('contenido');
+                    L10 = content;
+                    console.log("lamina: "+lamina);
+                    console.log("Entro el caso 10");
                     download();
-                    break;
+                }, 50)
+                break;
         }
         
     }
@@ -83,6 +87,7 @@ function showLamines(){
 
     document.getElementById("lamdiv").classList.remove("hidden")
     document.getElementById("lamdiv").classList.add("flex")
+    document.getElementById("see").focus();
     
 }
 document.getElementById("continue").addEventListener("click",showLamines)
