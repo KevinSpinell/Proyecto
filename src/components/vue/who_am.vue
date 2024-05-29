@@ -48,7 +48,7 @@
     }
     
 </script>
-<template>
+<template class="select-none">
     <div class="bg-[#F2E9D8] text-center mx-auto mt-10  py-8 px-10">
         <div class="flex justify-center flex-col">
             <h1 class="text-center  text-4xl text-[#804422] julius-sans-one-regular">
