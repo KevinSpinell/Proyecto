@@ -71,7 +71,7 @@
 	.archivo-narrow {
 		font-family: "Archivo Narrow", sans-serif;
 		font-optical-sizing: auto;
-		font-weight: <weight>;
+		font-weight: 600;
 		font-style: normal;
 	}
     .answer-div{

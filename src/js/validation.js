@@ -160,4 +160,3 @@ function cerrarSesion(){
     document.getElementById("button_login").innerText = "Iniciar Sesión"
     window.location="login";
 }
-// JS DEL INDEX
