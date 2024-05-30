@@ -10,8 +10,6 @@
         }
     }
 
-
-    // let quality = ref(["Muy poco","Poco","Más o menos","Un poco","Mucho"])
     const bg_grad = [
         "bg-gradient-to-r from-[#eeab2f] to-[#f2e9d8]",
         "bg-gradient-to-r from-[#ECAD39] to-[#ECDDC0]",
@@ -97,11 +95,6 @@
                                 {{ count }}/16
                             </p>
                         </div>
-                        <!-- <div id="help" class="absolute left-1/4 top-[20%] px-5 py-2 rounded-2xl border-2 border-[#804422] archivo-narrow text-base ">
-                            <p>
-                                5: Mucho | 4: Un poco | 3: Más o menos | 2: Poco | 1: Muy Poco
-                            </p>
-                        </div> -->
                         <div class="w-3/5 h-[150px]  text-center flex items-center archivo-narrow text-3xl justify-center" id="questionid"></div>
                         <div class="h-[80px]"></div>
                         <div class="flex justify-around w-3/4 archivo-narrow" id="anscont">

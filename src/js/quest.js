@@ -182,10 +182,7 @@
         document.getElementById("counter").classList.add("hidden")
         document.getElementById("sendQuest").style.display = "flex";
     }
-    // var good=0;
-    // var far=0;
-    // var near=0;
-    // var gone=0;
+    
     function showMessage(){
         document.getElementById("sendQuest").style.display = "none";
         //Mensaje cuando no hay riesgo
@@ -195,22 +192,16 @@
             blue++;
             localStorage.setItem('blue', blue);
         }
-        //Mensaje cuando no hay claridad en sus respuestas
-        else if(far==near || gone==good || near==good || far==gone ){
-            document.getElementById("titleMessage").innerText = "Tu puedes, nunca dudes de ello"
-            document.getElementById("message").innerText = "Es natural tener altibajos en el desempeño académico, y es importante reconocer que estar en una etapa 'regular' es solo una parte del proceso de aprendizaje. Utiliza este momento como una oportunidad para reflexionar sobre tus fortalezas y áreas de mejora. Identifica qué aspectos de tu enfoque de estudio podrían ajustarse para mejorar tu rendimiento. Recuerda que cada obstáculo es una oportunidad para crecer y aprender. Mantén una actitud positiva y persevera en tus esfuerzos. Con paciencia y determinación, puedes superar los desafíos y alcanzar tus metas académicas."
-            yellow++;
-            localStorage.setItem('yellow', yellow);
-        }
+        
         //Mensaje cuando hay poco riesgo
-        else if((far>good && far>near && far>gone) || (good==far && good!=0)){
+        else if((far>good && far>near && far>gone) || (good==far && good>4)){
             document.getElementById("titleMessage").innerText = "Vas por un muy buen camino"
             document.getElementById("message").innerText ="Eres un estudiante con un desempeño sólido y constante. Continúa trabajando con determinación y mantén tus objetivos en mente. Reconoce tus logros hasta ahora y sigue esforzándote para alcanzar tus metas. Confía en tus habilidades y en el progreso que has logrado hasta ahora, y sigue adelante con paso firme hacia tus aspiraciones."
             green++;
             localStorage.setItem('green', green);
         }
         //Mensaje cuando sí hay un poco de riesgo
-        else if((near>far && near>good && near>gone) || (near==gone && near!=0)){
+        else if((near>far && near>good && near>gone) || (near==gone && near>4)){
             document.getElementById("titleMessage").innerText = "Nada debe ser un impedimento para que te superes a ti mismo"
             document.getElementById("message").innerText ="Estás enfrentando algunos desafíos en tu desempeño académico en este momento, pero eso no define tu capacidad ni tu valía como estudiante. Reconoce las áreas en las que puedes mejorar y busca recursos y apoyo para superar estos obstáculos. Recuerda que los momentos difíciles también ofrecen oportunidades de crecimiento y aprendizaje. Mantén una actitud positiva y perseverante, y confía en tu capacidad para superar esta situación. Con esfuerzo y dedicación, puedes mejorar y alcanzar tus metas académicas."
             orange++;
@@ -223,7 +214,13 @@
             red++;
             localStorage.setItem('red', red);
         }
-        
+        //Mensaje cuando no hay claridad en sus respuestas
+        else if(far==near || gone==good || near==good || far==gone ){
+            document.getElementById("titleMessage").innerText = "Tu puedes, nunca dudes de ello"
+            document.getElementById("message").innerText = "Es natural tener altibajos en el desempeño académico, y es importante reconocer que estar en una etapa 'regular' es solo una parte del proceso de aprendizaje. Utiliza este momento como una oportunidad para reflexionar sobre tus fortalezas y áreas de mejora. Identifica qué aspectos de tu enfoque de estudio podrían ajustarse para mejorar tu rendimiento. Recuerda que cada obstáculo es una oportunidad para crecer y aprender. Mantén una actitud positiva y persevera en tus esfuerzos. Con paciencia y determinación, puedes superar los desafíos y alcanzar tus metas académicas."
+            yellow++;
+            localStorage.setItem('yellow', yellow);
+        }
         document.getElementById("mesDiv").style.display = "flex";
     }
     document.getElementById("send").addEventListener("click",showMessage)
