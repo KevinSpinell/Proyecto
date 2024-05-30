@@ -78,7 +78,7 @@
   };
   
   const nextSlide = () => {
-    if (currentIndex.value < 2) { // Assuming we have 3 slides
+    if (currentIndex.value < 2) { // Para 3 Sliders
       currentIndex.value++;
     }
   };
@@ -93,8 +93,8 @@
     }
     
     .slider {
-      display: flex;
-      width: 300%; /* 100% for each of the 3 slides */
+      display: flex; 
+      width: 300%; /* 100% fPara cada uno de los 3 Sliders */
     }
     
     .slide {
