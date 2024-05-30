@@ -81,7 +81,7 @@ const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
     showConfirmButton: false,
-    timer: 2000,
+    timer: 3000,
     timerProgressBar: true,
     didOpen: (toast) => {
         toast.onmouseenter = Swal.stopTimer;
@@ -107,14 +107,50 @@ function Register() {
     if (name && last_name && email && password && confirmpass) {
         if (name.value.length > 3 && last_name.value.length > 3) {
             if (validateEmail(email.value) && password.value == confirmpass.value && password.value.length >= 8) {
+                
                 let user = new User(name.value, last_name.value, email.value, password.value, role.value)
                 let userKey = "user_" + email.value
                 localStorage.setItem(userKey, JSON.stringify(user))
-                Toast.fire({
-                    icon: "success",
-                    title: "Registro Exitoso!"
+
+                const formData = new FormData()
+                formData.append('nombre', name.value);
+                formData.append('email', email.value);
+                formData.append('segundo_nombre', last_name.value);
+                const form = document.createElement('form');
+
+                form.appendChild(document.createElement('input')).name = 'nombre';
+                form.appendChild(document.createElement('input')).name = 'email';
+                form.appendChild(document.createElement('input')).name = 'segundo_nombre';
+
+                form.elements.nombre.value = formData.get('nombre');
+                form.elements.email.value = formData.get('email');
+                form.elements.segundo_nombre.value = formData.get('segundo_nombre');
+
+
+
+
+                Swal.fire({
+                    title: "Registro Exitoso, desea validar correo?",
+                    showDenyButton: true,
+                    confirmButtonText: "Validar",
+                    denyButtonText: `No Validar`
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        const serviceID = 'default_service';
+                        const templateID = 'template_xs0yusp';
+                        emailjs.sendForm(serviceID, templateID, form)
+                            .then(() => {
+                                console.log("Enviado")
+                                setTimeout(function() {
+                                    window.location = "login";
+                                },2000);
+                            }, (err) => {
+                                console.log(JSON.stringify(err))
+                            });
+                    } else if (result.isDenied) {
+                        window.location="login";
+                    }
                 });
-                window.location = "login"
             } else {
                 Toast.fire({
                     icon: "error",
@@ -128,6 +164,8 @@ function Register() {
             });
         }
     }
+
+    
 }
 function Login() {
     let email = document.getElementById("GET-email")

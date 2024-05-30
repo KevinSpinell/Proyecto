@@ -49,7 +49,7 @@
     
 </script>
 <template class="select-none">
-    <div class="bg-[#F2E9D8] text-center mx-auto mt-10  py-8 px-10">
+    <div class="bg-[#F2E9D8] text-center mx-auto mt-10  py-8 px-10 select-none">
         <div class="flex justify-center flex-col">
             <h1 class="text-center  text-4xl text-[#804422] julius-sans-one-regular">
                 ¿Quién Quiero Ser?
@@ -62,7 +62,7 @@
         <div id="caja" class="mt-12 mb-16 flex justify-center">
             <span id="text_dow" class="text-[#804422] hidden text-xl font-semibold archivo-narrow">Es momento de que coloques tu hoja de ruta en un lugar donde la puedas visualizar</span>
             <div class="flex justify-center">
-                <input id="meta" type="text" placeholder="¡Escribe tu meta!" class=" mr-6 border-2 rounded-lg p-2 border-[#804422] outline-none w-96" v-model="inputTasks">
+                <input id="meta" autocomplete="off" type="text" placeholder="¡Escribe tu meta!" class=" mr-6 border-2 rounded-lg p-2 border-[#804422] outline-none w-96" v-model="inputTasks">
                 <button id="agg" class="a bg-white mr-4 text-[#804422] pl-3 pr-3 pt-0 h-14 rounded-2xl border-2 border-[#804422] ease-in duration-300 hover:scale-110  hover:bg-[#804422] hover:text-white hover:border-[#804422] archivo-narrow" @click="addTask()" >Agregar</button>
                 <button id="form" class=" bg-white text-[#804422] w-[100px] pl-3 pr-3 pt-0 h-14 rounded-2xl border-2 border-[#804422] ease-in duration-300 hover:scale-110  hover:bg-[#804422] hover:text-white hover:border-[#804422] archivo-narrow" @click="enviar()" >Enviar</button>
             </div>
