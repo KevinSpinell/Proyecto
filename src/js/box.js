@@ -5,8 +5,16 @@ import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss'
 
 const palabrasFamiliaDesercion = [
+    "muerte",
+    "no sirvo para nada",
+    "me quiero morir",
+    "morir",
+    "me siento muy mal",
+    "mal",
     "abandono",
+    "abandonado",
     "ausencia",
+    "ausente",
     "separación",
     "divorcio",
     "conflicto",
@@ -14,14 +22,23 @@ const palabrasFamiliaDesercion = [
     "distancia",
     "neglecto",
     "negligencia",
+    "tenso",
+    "caótico",
     "falta",
     "alejamiento",
+    "alejado",
+    "extraño",
+    "fuera",
+    "encajamos",
+    "no pertenezco",
     "desentendimiento",
     "desvinculación",
     "desapego",
+    "desapegado",
     "desatención",
     "ruptura",
     "discordia",
+    "atrapado",
     "desconexión",
     "orfandad",
     "indiferencia",
@@ -32,19 +49,27 @@ const palabrasFamiliaDesercion = [
     "desesperanza",
     "tensión",
     "soledad",
+    "solo",
     "incomprensión",
     "rechazo",
+    "rechazado",
     "confusión",
+    "confundido",
     "vacío",
     "tristeza",
+    "triste",
+    "frustrado",
+    "abandonado",
     "abandono",
     "desinterés",
     "falta de apoyo",
     "inseguridad",
+    "inseguro",
     "inestabilidad",
     "incomunicación",
     "evasión",
     "desconfianza",
+    "desconfio",
     "desintegración",
     "perdida",
     "silencio",
@@ -158,10 +183,10 @@ const palabrasHabitosEstudioDesercion = [
     "falta de autoestima académica"
 ];
 const palabrasDebilidadesDesercionPrimeraPersona = [
-    "No me creo lo suficiente",
-    "Suelo ser flojo a veces",
+    "suficiente",
+    "flojo",
     "A veces me falta motivación",
-    "Me distraigo fácilmente",
+    "distraigo",
     "Mi organización es un desastre",
     "No le pongo mucho empeño",
     "A veces me rindo demasiado pronto",
@@ -201,7 +226,9 @@ const palabrasDebilidadesDesercionPrimeraPersona = [
 ];
 const palabrasVidaSocialNegativas = [
     "Me siento solo",
+    "solo",
     "Me siento aislado",
+    "aislado",
     "Me dejan de lado",
     "Me hacen el vacío",
     "Siempre hay líos en mis relaciones",
@@ -424,6 +451,7 @@ function evaluartext(event) {
     let b=20;
     let x = 10; // Coordenada x inicial
     let y = 40; // Coordenada y inicial
+
     let textoUsuario = detect.join(" ");
     const lines = doc.splitTextToSize(textoUsuario, doc.internal.pageSize.width - 20);
     doc.text(10, 20, lines);
