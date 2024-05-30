@@ -4,18 +4,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 <script  src="../js/validation.js"></script>
 <Layout tittle='Crea una cuenta!'>
-    <main class="flex justify-center items-center p-32 bg-[url('/public/fondo_login.jpg')] bg-cover  ">
+    <main class="flex justify-center items-center p-32  bg-cover  ">
         <div id="center" class=" bg-white text-center  h-[575px] w-[800px] rounded-xl shadow-2xl p-14">
             <h1 class="text-[#804422] text-4xl font-semibold mb-2 julius-sans-one-regular">Regístrate</h1>
             <div class="flex  justify-center ">
                 <div class="w-1/2 flex flex-col gap-8 p-4">
-                    <input type="text" id="name" placeholder="Nombre" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
-                <input type="text" id="last_name" placeholder="Segundo Nombre" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
-                <input type="email" id="email" autocomplete="off" placeholder="example@gmail.com" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
+                    <input name="nombre" type="text" id="name" placeholder="Nombre" autocomplete="off" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
+                    <input name="segundo_nombre" type="text" id="last_name" autocomplete="off" placeholder="Segundo Nombre" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
+                    <input name="email" type="email" id="email" autocomplete="off" placeholder="example@gmail.com" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
                 </div>
                 <div class="w-1/2 flex flex-col gap-8 p-4">
                     <input type="password" autocomplete="off" id="password" placeholder="Contraseña" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
-                    <input type="password" id="confirmpass" placeholder="Confirmar  Contraseña" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
+                    <input type="password" autocomplete="off" id="confirmpass" placeholder="Confirmar  Contraseña" class="border-2 rounded-lg p-2 border-[#804422] outline-none">
                     <select name="role" id="role"  class="border-2 rounded-lg p-2 border-[#804422] outline-none">
                         <option value="estudiante">Estudiante</option>
                         <option value="admin">Administrativo</option>
@@ -32,6 +32,13 @@ import Layout from '../layouts/Layout.astro';
         </div>
     </main>
 </Layout>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+    emailjs.init('hcM8V8g-T0Sg6joq1')
+</script>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Kanit:wght@900&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
